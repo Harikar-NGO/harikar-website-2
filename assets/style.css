@@ -1,0 +1,14 @@
+@import "open-props/style";
+@import "open-props/normalize";
+
+:root {
+  --brand: #4b60a5;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
