@@ -16,7 +16,10 @@
             width="100%"
             height="auto"
           />
-          <p>{{ project.name.substr(0, 25) + "..." }}</p>
+          <p class="media-element__title">
+            {{ project.name.substr(0, 25) + "..." }}
+          </p>
+          <button class="media-element__btn">Learn More</button>
         </div>
       </div>
     </div>
@@ -25,13 +28,21 @@
 
 <style scoped>
 .main-wrap {
-  padding-block: var(--size-10);
+  padding-block: var(--size-4);
   display: grid;
   grid-template:
-    "title" 1fr
+    "title" 0.5fr
     "content" 2fr / 1fr;
+
   place-items: center;
   background: var(--gray-2);
+}
+
+@media (min-width: 850px) {
+  .main-wrap {
+    grid-template: "content title" / 2fr 1fr;
+    padding-block: var(--size-10);
+  }
 }
 .section-title {
   grid-area: title;
@@ -44,13 +55,20 @@
 }
 @media (min-width: 850px) {
   .section-title {
-    justify-self: start;
-    align-self: center;
+    background-image: var(--gradient-29);
+    border: var(--border-size-1) solid var(--gray-3);
+    border-radius: var(--radius-blob-4);
+    box-shadow: var(--shadow-2);
+    place-items: start;
+  }
+  .section-title h2 {
+    padding-block: var(--size-11);
+    padding-inline: var(--size-7);
   }
 }
 .container {
   grid-area: content;
-  margin-inline: var(--size-10);
+  overflow-x: hidden;
   max-width: 100%;
 }
 .media-scroller {
@@ -58,13 +76,12 @@
   display: grid;
   grid-auto-flow: column;
   gap: var(--_spacer);
-  grid-auto-columns: 15rem;
+  grid-auto-columns: 12rem;
   padding-inline: var(--_spacer);
   padding-block: var(--_spacer);
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 }
-
 .media-element {
   display: grid;
   grid-template-rows: min-content;
@@ -76,8 +93,11 @@
 }
 .media-element > img {
   inline-size: 100%;
+  aspct-ratio: var(--ratio-landscape);
   object-fit: cover;
-  aspect-ratio: var(--ratio-landscape);
+}
+.media-element__title {
+  font-size: var(--font-size-fluid-0);
 }
 
 .snaps-inline {

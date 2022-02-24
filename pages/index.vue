@@ -2,7 +2,8 @@
   <Hero id="home" />
   <Aboutus id="about" />
   <Profile id="profile" />
-  <Ourprojects id="projects" />
+  <Projects id="projects" />
+  <Partners id="partners" />
 </template>
 
 <style scoped>

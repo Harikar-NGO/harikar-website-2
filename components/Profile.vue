@@ -137,6 +137,12 @@
   background: var(--gray-0);
 }
 
+@media (min-width: 1200px) {
+  .main-wrap {
+    padding-inline: var(--size-13);
+  }
+}
+
 .tab-panel p {
   font-size: var(--font-size-fluid-0);
   padding-block: var(--size-2);
@@ -192,7 +198,7 @@
   content: "Our";
   color: var(--brand);
   position: absolute;
-  top: -2rem;
+  top: -3rem;
   left: 0;
   right: 0;
   font-size: var(--font-size-4);
@@ -249,11 +255,6 @@
   column-count: 2;
 }
 
-@media (min-width: 480px) {
-  .mission {
-    column-count: 3;
-  }
-}
 .values {
   column-count: 2;
 }
