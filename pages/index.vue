@@ -3,7 +3,10 @@
   <Aboutus id="about" />
   <Profile id="profile" />
   <Projects id="projects" />
+  <Expertise id="expertise" />
   <Partners id="partners" />
+  <Quotation id="quotation" />
+  <Address id="address" />
 </template>
 
 <style scoped>

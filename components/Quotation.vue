@@ -1,26 +1,11 @@
 <template>
   <div class="main-wrap">
-    <div class="section-title">
-      <title-right title="Our Partners" />
-    </div>
-    <div class="container">
-      <div class="media-scroller snaps-inline">
-        <div
-          class="media-element"
-          v-for="(partner, index) in partners"
-          :key="index"
-        >
-          <a :href="'https://' + partner.link" target="_blank">
-            <img
-              class="partner-logo"
-              :src="partner.img"
-              :alt="partner.title + ' logo'"
-              width="100%"
-              height="auto"
-            />
-          </a>
-        </div>
-      </div>
+    <div>
+      <p class="quote">
+        Provision of required services to destitute people is not a task of
+        charity, rather an act of humanity and justice.
+      </p>
+      <footer>- Salah Y. Majid</footer>
     </div>
   </div>
 </template>
@@ -28,70 +13,46 @@
 <style scoped>
 .main-wrap {
   padding-block: var(--size-4);
+  padding-inline: var(--size-8);
   display: grid;
-  grid-template:
-    "title" 0.5fr
-    "content" 2fr / 1fr;
-
   place-items: center;
-  background: var(--gray-2);
-  overflow: hidden;
+  background-image: var(--gradient-29);
+}
+
+.quote {
+  font-size: var(--font-size-fluid-1);
+  /* quotes: "\201C""\201D""\2018""\2019"; */
+  padding-block: var(--size-2);
+  padding-inline: var(--size-4);
+  line-height: var(--font-lineheight-2);
+  max-width: var(--size-content-3);
+}
+
+.quote::before {
+  content: open-quote;
+  display: inline;
+  line-height: 0;
+  left: -0.1em;
   position: relative;
+  top: 0.5em;
+  color: var(--brand);
+  font-size: 3em;
 }
-@media (min-width: 850px) {
-  .main-wrap {
-    grid-template: "content title" / 2fr 1fr;
-    padding-block: var(--size-11);
-    gap: var(--size-8);
-  }
+.quote::after {
+  content: close-quote;
+  display: inline;
+  line-height: 0;
+  left: 0.1em;
+  position: relative;
+  top: 0.5em;
+  color: var(--brand);
+  font-size: 3em;
 }
-
-.title {
-  grid-area: section-title;
-}
-
-.section-title {
-  grid-area: title;
-}
-
-.container {
-  grid-area: content;
-  overflow: hidden;
-  max-width: 100%;
-}
-.media-scroller {
-  --_spacer: var(--size-1);
-  display: grid;
-  grid-auto-flow: column;
-  gap: var(--_spacer);
-  grid-auto-columns: 8rem;
-  padding-inline: var(--_spacer);
-  padding-block: var(--_spacer);
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
-  place-items: center;
-}
-
-.media-element {
-  display: grid;
-  place-content: center;
-  grid-template-rows: min-content;
-  gap: var(--_spacer);
-  padding: var(--_spacer);
-}
-
-.partner-logo {
-  inline-size: 100%;
-  aspct-ratio: var(--ratio-landscape);
-  object-fit: cover;
-}
-
-.snaps-inline {
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: var(--_spacer);
-}
-.snaps-inline > * {
-  scroll-snap-align: start;
+footer {
+  margin: 0;
+  text-align: right;
+  font-size: var(--font-size-fluid-1);
+  font-style: italic;
 }
 </style>
 

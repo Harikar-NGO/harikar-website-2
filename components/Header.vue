@@ -96,7 +96,7 @@ header {
   justify-content: space-between;
   padding-block: var(--size-fluid-1);
   background: var(--gray-0);
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow-2);
   position: sticky;
   top: 0;
   left: 0;

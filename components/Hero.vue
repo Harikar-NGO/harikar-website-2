@@ -1,3 +1,4 @@
+g
 <template>
   <div class="hero-wrap">
     <div class="hero">
@@ -22,10 +23,22 @@
         height="auto"
       />
     </picture>
+    <div v-if="breakPoints == 'lg'" class="triangle">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+      </svg>
+    </div>
   </div>
 </template>
 
-<script></script>
+<script setup>
+const { breakPoints } = useBreakpoints();
+</script>
 
 <style scoped>
 .hero-wrap {
@@ -35,8 +48,8 @@
     "hero"
     "image" 10rem;
   background-image: var(--gradient-29);
-  box-shadow: var(--shadow-3);
   overflow-x: hidden;
+  position: relative;
 }
 
 @media (min-width: 800px) {
@@ -51,10 +64,34 @@
   }
 }
 
+.triangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.triangle svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 30px;
+  /* transform: rotateY(180deg); */
+}
+
+.triangle .shape-fill {
+  fill: var(--gray-0);
+  stroke: var(--gray-0);
+}
+
 .hero {
   grid-area: hero;
   padding: var(--size-10);
   display: grid;
+  place-content: center;
   gap: var(--size-5);
   max-width: 100%;
 }
@@ -71,6 +108,7 @@
   color: var(--gray-7);
   font-size: var(--font-size-fluid-);
   margin-block-end: var(--size-3);
+  font-weight: var(--font-weight-6);
 }
 
 .button-list {

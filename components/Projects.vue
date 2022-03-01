@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap">
     <div class="section-title">
-      <h2>Our Projects</h2>
+      <title-right title="Our Projects" />
     </div>
     <div class="container">
       <div class="media-scroller snaps-inline">
@@ -23,6 +23,19 @@
         </div>
       </div>
     </div>
+    <div v-if="breakPoints == 'lg'" class="tint">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+          class="shape-fill"
+        ></path>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -33,39 +46,46 @@
   grid-template:
     "title" 0.5fr
     "content" 2fr / 1fr;
-
   place-items: center;
   background: var(--gray-2);
+  position: relative;
+}
+
+.tint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.tint svg {
+  position: relative;
+  display: block;
+  width: calc(159% + 1.3px);
+  height: 50px;
+}
+
+.tint .shape-fill {
+  fill: var(--gray-0);
+  stroke: var(--gray-0);
 }
 
 @media (min-width: 850px) {
   .main-wrap {
     grid-template: "content title" / 2fr 1fr;
-    padding-block: var(--size-10);
+    padding-bottom: var(--size-12);
+    padding-top: var(--size-10);
+    padding-right: var(--size-8);
   }
 }
+
 .section-title {
   grid-area: title;
-  display: grid;
-  margin-inline: var(--size-8);
 }
-.section-title h2 {
-  font-size: var(--font-size-fluid-2);
-  color: var(--brand);
-}
-@media (min-width: 850px) {
-  .section-title {
-    background-image: var(--gradient-29);
-    border: var(--border-size-1) solid var(--gray-3);
-    border-radius: var(--radius-blob-4);
-    box-shadow: var(--shadow-2);
-    place-items: start;
-  }
-  .section-title h2 {
-    padding-block: var(--size-11);
-    padding-inline: var(--size-7);
-  }
-}
+
 .container {
   grid-area: content;
   overflow-x: hidden;
@@ -100,6 +120,23 @@
   font-size: var(--font-size-fluid-0);
 }
 
+.media-element__btn {
+  font-size: var(--font-size-fluid-0);
+  padding-inline: var(--size-1);
+  padding-block: var(--size-1);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+  background: var(--brand);
+  text-shadow: 0 1px 0 var(--brand);
+  color: white;
+  display: block;
+}
+
+.media-element__btn:hover {
+  background: var(--gray-2);
+  color: var(--brand);
+}
+
 .snaps-inline {
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: var(--_spacer);
@@ -110,6 +147,7 @@
 </style>
 
 <script setup>
+const { breakPoints } = useBreakpoints();
 const getImg = (id) => {
   return `https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/projects/project-${id}.webp`;
 };

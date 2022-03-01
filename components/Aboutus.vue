@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap">
-    <div class="title">
-      <h2>About Us</h2>
+    <div class="section-title">
+      <title-left title="About us" />
     </div>
     <div class="content">
       <p class="content-title">
@@ -31,29 +31,16 @@
 @media (min-width: 850px) {
   .main-wrap {
     grid-template: "title content" / 1fr 2fr;
+    padding-top: var(--size-12);
+    padding-bottom: var(--size-11);
+    gap: var(--size-8);
   }
 }
+
 .title {
-  grid-area: title;
-  display: grid;
+  grid-area: section-title;
 }
-.title h2 {
-  font-size: var(--font-size-fluid-2);
-  color: var(--brand);
-}
-@media (min-width: 850px) {
-  .title {
-    background-image: var(--gradient-29);
-    border: var(--border-size-1) solid var(--gray-3);
-    border-radius: var(--radius-blob-1);
-    box-shadow: var(--shadow-2);
-    place-items: start;
-  }
-  .title h2 {
-    padding-block: var(--size-11);
-    padding-inline: var(--size-7);
-  }
-}
+
 .content {
   grid-area: content;
   padding: var(--size-6);
@@ -90,9 +77,11 @@
   content: "";
   position: absolute;
   top: -1.2rem;
-  left: 0;
+  left: 25%;
   right: 0;
   border-top: var(--border-size-3) solid var(--brand);
+  width: 50%;
+  border-radius: var(--radius-2);
 }
 .stats-item--value {
   font-size: var(--font-size-fluid-2);
