@@ -8,15 +8,7 @@
         height="80px"
       />
     </a>
-    <button
-      @click="openNav()"
-      class="btn nav-toggle-btn"
-      type="button"
-      aria-label="toggle navigation drawer"
-    >
-      <i v-if="open" class="mdi mdi-backburger" aria-hidden="true"></i>
-      <i v-else class="mdi mdi-menu" aria-hidden="true"></i>
-    </button>
+    <Menu @openNav="openNav" :isOpen="open" />
     <nav v-if="open || breakPoints === 'md' || breakPoints == 'lg'" class="nav">
       <ul class="main-nav">
         <li v-for="item in navItems" :key="item.index">
@@ -28,43 +20,27 @@
     </nav>
     <ul class="nav-buttons">
       <li>
-        <button
-          class="btn nav-button-dark"
-          type="button"
-          aria-label="toggle dark mode"
-          @click="toggleDark"
-        >
-          <i class="mdi mdi-theme-light-dark" aria-hidden="true"></i>
-        </button>
+        <Theme />
       </li>
       <li>
-        <button
-          class="btn nav-button-notify"
-          type="button"
-          aria-label="show notifications"
-        >
-          <i class="mdi mdi-bell" aria-hidden="true"></i>
-        </button>
+        <Bell />
       </li>
     </ul>
   </header>
 </template>
 
 <script setup>
+import Menu from "./buttons/Menu.vue";
+import Theme from "./buttons/ToggleDark.vue";
+import Bell from "./buttons/NotificationBell.vue";
 const route = useRoute();
 const currentRoute = ref(route.name);
-const colorMode = useColorMode();
 
 const { breakPoints } = useBreakpoints();
 
 const open = ref(false);
 const openNav = () => {
   open.value = !open.value;
-};
-
-const toggleDark = () => {
-  const switchTo = colorMode.value === "light" ? "dark" : "light";
-  colorMode.preference = switchTo;
 };
 
 const navItems = [
@@ -184,6 +160,8 @@ header {
   display: flex;
   margin-inline-end: var(--size-8);
   gap: var(--size-4);
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
@@ -194,15 +172,5 @@ header {
 
 .btn:hover {
   color: var(--brand);
-}
-.nav-toggle-btn {
-  position: absolute;
-  inset: 0 0 0 4%;
-  z-index: var(--layer-5);
-}
-@media (min-width: 850px) {
-  .nav-toggle-btn {
-    display: none;
-  }
 }
 </style>
