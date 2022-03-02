@@ -16,6 +16,7 @@
   padding-inline: var(--size-8);
   display: grid;
   place-items: center;
+  background: var(--surface3);
   background-image: var(--gradient-29);
 }
 

@@ -32,6 +32,7 @@
           class="btn nav-button-dark"
           type="button"
           aria-label="toggle dark mode"
+          @click="toggleDark"
         >
           <i class="mdi mdi-theme-light-dark" aria-hidden="true"></i>
         </button>
@@ -52,12 +53,18 @@
 <script setup>
 const route = useRoute();
 const currentRoute = ref(route.name);
+const colorMode = useColorMode();
 
 const { breakPoints } = useBreakpoints();
 
 const open = ref(false);
 const openNav = () => {
   open.value = !open.value;
+};
+
+const toggleDark = () => {
+  const switchTo = colorMode.value === "light" ? "dark" : "light";
+  colorMode.preference = switchTo;
 };
 
 const navItems = [
@@ -95,20 +102,19 @@ header {
   align-items: center;
   justify-content: space-between;
   padding-block: var(--size-fluid-1);
-  background: var(--gray-0);
   box-shadow: var(--shadow-2);
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: var(--layer-4);
+  background: var(--surface1);
 }
 
 .main-nav {
   display: flex;
   flex-direction: row;
   position: static;
-  background: transparent;
   box-shadow: none;
   list-style: none;
   margin: 0;
@@ -120,9 +126,13 @@ header {
 }
 
 .main-nav li a {
-  color: var(--gray-7);
   font-weight: var(--font-weight-5);
   text-decoration: none;
+  color: var(--text2);
+}
+
+.main-nav li a:hover {
+  color: var(--brand);
 }
 
 .active {
@@ -147,10 +157,10 @@ header {
 
 @media (max-width: 850px) {
   .main-nav {
+    background: var(--surface3);
     flex-direction: column;
     position: fixed;
     inset: 0 70% 0 0;
-    background: var(--gray-2);
     z-index: var(--layer-4);
     box-shadow: var(--shadow-3);
     padding-block: var(--size-fluid-7);
@@ -172,12 +182,14 @@ header {
   list-style-type: none;
   margin: 0;
   display: flex;
-  margin-inline-end: var(--size-4);
+  margin-inline-end: var(--size-8);
+  gap: var(--size-4);
 }
 
 .btn {
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-5);
   background: transparent;
+  color: var(--text2);
 }
 
 .btn:hover {

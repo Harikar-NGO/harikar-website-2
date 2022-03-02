@@ -47,6 +47,7 @@ const { breakPoints } = useBreakpoints();
   grid-template:
     "hero"
     "image" 10rem;
+  background: var(--surface3);
   background-image: var(--gradient-29);
   overflow-x: hidden;
   position: relative;
@@ -83,8 +84,8 @@ const { breakPoints } = useBreakpoints();
 }
 
 .triangle .shape-fill {
-  fill: var(--gray-0);
-  stroke: var(--gray-0);
+  fill: var(--surface1);
+  stroke: var(--surface1);
 }
 
 .hero {
@@ -134,16 +135,14 @@ button {
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-2);
   background: var(--brand);
-  text-shadow: 0 1px 0 var(--brand);
-  color: white;
+  color: var(--gray-2);
   text-transform: uppercase;
   display: flex;
   gap: 1rem;
 }
 
 button:hover {
-  background: var(--gray-2);
-  color: var(--brand);
+  transform: scale(1.1);
 }
 
 .promo-art {

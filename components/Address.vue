@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrap">
+  <div class="main-wrap surface1">
     <div class="section-title">
       <title-left title="Our Office" />
     </div>
@@ -42,7 +42,6 @@
     "content" 2fr / 1fr;
 
   place-items: center;
-  background: var(--gray-0);
   grid-row-gap: var(--size-8);
 }
 @media (min-width: 850px) {
@@ -64,7 +63,7 @@
   grid-area: address;
   display: grid;
   gap: var(--size-3);
-  background: var(--gray-2);
+  background: var(--surface3);
   padding: var(--size-fluid-2);
   box-shadow: var(--shadow-2);
   border-radius: var(--radius-2);
@@ -89,10 +88,10 @@
   width: 100%;
   height: 100%;
   border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
 }
 @media (min-width: 850px) {
   .content {
-    grid-area: content;
     width: 70%;
   }
 }

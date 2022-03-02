@@ -21,18 +21,10 @@ const props = defineProps({
 }
 @media (min-width: 850px) {
   .title {
-    /* background-image: var(--gradient-29);
-       border: var(--border-size-1) solid var(--gray-3);
-       border-radius: var(--radius-blob-1);
-       box-shadow: var(--shadow-2); */
     place-items: center;
     position: relative;
     z-index: var(--layer-3);
   }
-  /* h2 {
-     padding-block: var(--size-11);
-     padding-inline: var(--size-8);
-     } */
   h2 {
     width: 5ch;
   }
@@ -41,12 +33,14 @@ const props = defineProps({
     position: absolute;
     top: -4em;
     left: -2em;
+    background: var(--surface3);
     background-image: var(--gradient-29);
     width: 15em;
     height: 15em;
     transform: rotate(48deg);
     z-index: -1;
     border-radius: var(--radius-3);
+    box-shadow: var(--shadow-3);
   }
   .title::after {
     content: "";
@@ -59,6 +53,7 @@ const props = defineProps({
     height: 17em;
     transform: rotate(42deg);
     z-index: -1;
+    box-shadow: var(--shadow-2);
   }
 }
 </style>

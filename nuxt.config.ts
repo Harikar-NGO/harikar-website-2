@@ -4,4 +4,5 @@ import { defineNuxtConfig } from "nuxt3";
 export default defineNuxtConfig({
   components: true,
   css: ["~/assets/style.css", "@mdi/font/css/materialdesignicons.min.css"],
+  modules: ["@nuxtjs/color-mode"],
 });

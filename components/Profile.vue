@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrap">
+  <div class="main-wrap surface1">
     <div class="tabset">
       <input
         type="radio"
@@ -151,7 +151,6 @@ const { breakPoints } = useBreakpoints();
   display: grid;
   justify-items: center;
   grid-gap: var(--size-fluid-1);
-  background: var(--gray-0);
   position: relative;
 }
 
@@ -180,8 +179,8 @@ const { breakPoints } = useBreakpoints();
 }
 
 .tint .shape-fill {
-  fill: var(--gray-2);
-  stroke: var(--gray-2);
+  fill: var(--surface3);
+  stroke: var(--surface3);
 }
 
 .tab-panel p {
@@ -267,7 +266,7 @@ const { breakPoints } = useBreakpoints();
   bottom: 10px;
   width: 22px;
   height: 4px;
-  background: var(--gray-6);
+  background: var(--text1);
 }
 
 .tabset > label:hover,
@@ -282,14 +281,14 @@ const { breakPoints } = useBreakpoints();
 }
 
 .tabset > input:checked + label {
-  border-color: var(--gray-7);
-  border-bottom: var(--border-size-1) solid var(--gray-0);
+  border-color: var(--text1);
+  border-bottom: var(--border-size-1) solid var(--surface1);
   margin-bottom: -1px;
 }
 
 .tab-panel {
   padding: 30px 0;
-  border-top: var(--border-size-1) solid var(--gray-7);
+  border-top: var(--border-size-1) solid var(--text1);
 }
 
 .mission {

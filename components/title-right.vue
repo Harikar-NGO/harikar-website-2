@@ -33,12 +33,14 @@ const props = defineProps({
     position: absolute;
     top: -4em;
     right: -5em;
+    background: var(--surface3);
     background-image: var(--gradient-29);
     width: 15em;
     height: 15em;
     transform: rotate(42deg);
     z-index: var(--layer-2);
     border-radius: var(--radius-3);
+    box-shadow: var(--shadow-3)
   }
   .title::after {
     content: "";
@@ -51,6 +53,7 @@ const props = defineProps({
     height: 17em;
     transform: rotate(48deg);
     z-index: var(--layer-2);
+    box-shadow: var(--shadow-2)
   }
 }
 </style>

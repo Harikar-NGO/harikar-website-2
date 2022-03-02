@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrap">
+  <div class="main-wrap surface3">
     <div class="section-title">
       <title-right title="Our Partners" />
     </div>
@@ -15,8 +15,8 @@
               class="partner-logo"
               :src="partner.img"
               :alt="partner.title + ' logo'"
-              width="100%"
-              height="auto"
+              max-width="100%"
+              max-height="100%"
             />
           </a>
         </div>
@@ -27,22 +27,23 @@
 
 <style scoped>
 .main-wrap {
-  padding-block: var(--size-4);
+  padding-block: var(--size-8);
   display: grid;
   grid-template:
     "title" 0.5fr
     "content" 2fr / 1fr;
 
   place-items: center;
-  background: var(--gray-2);
   overflow: hidden;
   position: relative;
+  gap: var(--size-8);
 }
 @media (min-width: 850px) {
   .main-wrap {
     grid-template: "content title" / 2fr 1fr;
     padding-block: var(--size-11);
-    gap: var(--size-8);
+    padding-inline: var(--size-10);
+    gap: var(--size-4);
   }
 }
 
@@ -60,11 +61,11 @@
   max-width: 100%;
 }
 .media-scroller {
-  --_spacer: var(--size-1);
+  --_spacer: var(--size-2);
   display: grid;
   grid-auto-flow: column;
-  gap: var(--_spacer);
-  grid-auto-columns: 8rem;
+  gap: var(--size-3);
+  grid-auto-columns: 10rem;
   padding-inline: var(--_spacer);
   padding-block: var(--_spacer);
   overflow-x: auto;
@@ -78,12 +79,17 @@
   grid-template-rows: min-content;
   gap: var(--_spacer);
   padding: var(--_spacer);
+  min-height: 10rem;
+  max-height: 10rem;
+  min-width: 10rem;
+  box-shadow: var(--shadow-2);
+  background: var(--surface4);
 }
 
 .partner-logo {
-  inline-size: 100%;
-  aspct-ratio: var(--ratio-landscape);
   object-fit: cover;
+  max-width: 9rem;
+  max-height: 9rem;
 }
 
 .snaps-inline {

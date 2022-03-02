@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrap">
+  <div class="main-wrap surface3">
     <div class="section-title">
       <title-right title="Our Projects" />
     </div>
@@ -41,14 +41,14 @@
 
 <style scoped>
 .main-wrap {
-  padding-block: var(--size-4);
+  padding-block: var(--size-8);
   display: grid;
   grid-template:
     "title" 0.5fr
     "content" 2fr / 1fr;
   place-items: center;
-  background: var(--gray-2);
   position: relative;
+  gap: var(--size-8);
 }
 
 .tint {
@@ -69,8 +69,8 @@
 }
 
 .tint .shape-fill {
-  fill: var(--gray-0);
-  stroke: var(--gray-0);
+  fill: var(--surface1);
+  stroke: var(--surface1);
 }
 
 @media (min-width: 850px) {
@@ -78,7 +78,8 @@
     grid-template: "content title" / 2fr 1fr;
     padding-bottom: var(--size-12);
     padding-top: var(--size-10);
-    padding-right: var(--size-8);
+    padding-inline: var(--size-10);
+    gap: var(--size-4);
   }
 }
 
@@ -107,9 +108,9 @@
   grid-template-rows: min-content;
   gap: var(--_spacer);
   padding: var(--_spacer);
-  background: var(--gray-0);
+  background: var(--surface4);
   border-radius: var(--radius-2);
-  bax-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-2);
 }
 .media-element > img {
   inline-size: 100%;
@@ -127,14 +128,12 @@
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-2);
   background: var(--brand);
-  text-shadow: 0 1px 0 var(--brand);
-  color: white;
+  color: var(--gray-2);
   display: block;
 }
 
 .media-element__btn:hover {
-  background: var(--gray-2);
-  color: var(--brand);
+  transform: scale(1.1);
 }
 
 .snaps-inline {

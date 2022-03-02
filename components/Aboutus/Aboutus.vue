@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrap">
+  <div class="main-wrap surface1">
     <div class="section-title">
       <title-left title="About us" />
     </div>
@@ -26,7 +26,6 @@
     "content" 2fr / 1fr;
 
   place-items: center;
-  background: var(--gray-0);
 }
 @media (min-width: 850px) {
   .main-wrap {

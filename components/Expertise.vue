@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrap">
+  <div class="main-wrap surface1">
     <div class="section-title">
       <title-left title="Our Expertise" />
     </div>
@@ -13,7 +13,7 @@
           v-for="(list, index) in expertiseList"
           :key="index"
           class="expertise-list"
-          :class="{ active: index == 1 }"
+          :class="{ active: isActive && index === 1 }"
         >
           <button
             v-for="(item, index) in list"
@@ -50,15 +50,16 @@
     "content" 2fr / 1fr;
 
   place-items: center;
-  background: var(--gray-0);
   position: relative;
+  gap: var(--size-8);
 }
 @media (min-width: 850px) {
   .main-wrap {
     grid-template: "title content" / 1fr 2fr;
     padding-bottom: var(--size-12);
     padding-top: var(--size-10);
-    padding-inline: var(--size-8);
+    padding-inline: var(--size-10);
+    gap: var(--size-4);
   }
 }
 
@@ -82,8 +83,8 @@
 }
 
 .tint .shape-fill {
-  fill: var(--gray-2);
-  stroke: var(--gray-2);
+  fill: var(--surface3);
+  stroke: var(--surface3);
 }
 
 .title {
@@ -126,11 +127,15 @@
   background: var(--brand);
   color: var(--gray-2);
   border-radius: var(--radius-2);
+  animation: var(--animation-slide-in-down);
 }
 </style>
 
 <script setup>
 const { breakPoints } = useBreakpoints();
+
+const isActive = ref(true);
+
 let expertiseList = ref([
   ["General Protection", "GBV", "Legal Assistance"],
   ["Livelihood", "PSEA Trainings", "WASH"],
@@ -139,11 +144,9 @@ let expertiseList = ref([
 ]);
 const flipList = () => {
   let array = expertiseList.value;
-  const lastElm = array[array.length - 1];
-  array.pop();
-  array.unshift(lastElm);
-
+  array.unshift(array.pop());
   return array;
 };
+
 setInterval(flipList, 2800);
 </script>
