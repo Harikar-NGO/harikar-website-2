@@ -10,7 +10,7 @@
         class="notification--bell"
       ></path>
     </svg>
-    <span class="notification--num">5</span>
+    <div class="notification--num">5</div>
   </div>
 </template>
 
@@ -19,15 +19,19 @@
 <style scoped>
 .notification {
   position: relative;
+  cursor: pointer;
 }
 
 .notification svg > path {
   fill: var(--text2);
-}
-.notification--bell {
-  animation: bell 2.2s linear;
-  transform-origin: 50% 0%;
-}
+ }
+ .notification svg > path:hover {
+   fill: var(--text1);
+ }
+ .notification--bell {
+   animation: bell 2.2s linear;
+   transform-origin: 50% 0%;
+ }
 .notification--bellClapper {
   animation: bellClapper 2.2s 0.1s linear;
 }
@@ -35,13 +39,15 @@
   position: absolute;
   top: 0%;
   left: 70%;
-  font-size: var(--font-size-1);
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
+  font-size: var(--font-size-0);
+  border-radius: var(--radius-2);
+  width: 1.1rem;
+  height: 1.1rem;
   background-color: var(--red-4);
   color: var(--text1);
   text-align: center;
+  display: grid;
+  place-content: center;
   animation: notification 3.2s ease;
 }
 

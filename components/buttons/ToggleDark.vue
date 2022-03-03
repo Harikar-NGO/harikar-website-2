@@ -1,16 +1,12 @@
 <template>
-  <button
-    class="btn nav-button-dark"
-    type="button"
-    aria-label="toggle dark mode"
-    @click="toggleTheme"
-  >
-    <input id="toggle" class="toggle" type="checkbox" />
-  </button>
+  <div class="btn nav-button-dark">
+    <input type="checkbox" @change="toggleTheme" id="toggle" class="toggle" />
+  </div>
 </template>
 
 <script setup>
 const colorMode = useColorMode();
+const toggle = ref(false);
 
 const toggleTheme = () => {
   const switchTo = colorMode.value === "light" ? "dark" : "light";
@@ -19,16 +15,6 @@ const toggleTheme = () => {
 </script>
 
 <style scoped>
-.btn {
-  font-size: var(--font-size-5);
-  background: transparent;
-  color: var(--text2);
-}
-
-.btn:hover {
-  color: var(--brand);
-}
-
 .toggle {
   --size: var(--font-size-4);
 
@@ -43,6 +29,9 @@ const toggleTheme = () => {
   color: var(--text2);
 
   transition: all 500ms;
+}
+.toggle:hover {
+  color: var(--text1);
 }
 .toggle:checked {
   --ray-size: calc(var(--size) * -0.4);
@@ -61,5 +50,8 @@ const toggleTheme = () => {
     var(--offset-diagonal) var(--offset-diagonal) 0 var(--ray-size),
     calc(var(--offset-diagonal) * -1) var(--offset-diagonal) 0 var(--ray-size),
     var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
+}
+.toggle:hover:checked {
+  color: var(--text1);
 }
 </style>

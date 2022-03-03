@@ -1,5 +1,6 @@
 <template>
   <header>
+    <Menu @openNav="openNav" :isOpen="open" class="menu-button" />
     <a :href="currentRoute === 'index' ? '#home' : '/#home'" class="logo">
       <img
         alt="Harikar NGO's logo"
@@ -8,9 +9,8 @@
         height="80px"
       />
     </a>
-    <Menu @openNav="openNav" :isOpen="open" />
-    <nav v-if="open || breakPoints === 'md' || breakPoints == 'lg'" class="nav">
-      <ul class="main-nav">
+    <nav class="nav">
+      <ul class="main-nav" :class="{ opened: open }">
         <li v-for="item in navItems" :key="item.index">
           <a :href="currentRoute === 'index' ? item.link : item.xlink">{{
             item.name
@@ -136,21 +136,33 @@ header {
     background: var(--surface3);
     flex-direction: column;
     position: fixed;
-    inset: 0 70% 0 0;
+    top: 0;
+    left: 0;
+    right: 70%;
+    bottom: 0;
     z-index: var(--layer-4);
     box-shadow: var(--shadow-3);
     padding-block: var(--size-fluid-7);
-    padding-inline: var(--size-fluid-5);
-    animation: var(--animation-slide-in-right);
+    padding-left: var(--size-8);
+    transform: translateX(-100%);
+    transition: transform 350ms var(--ease-out-1);
+  }
+  .opened {
+    transform: translateX(0);
   }
 }
 
 @media (max-width: 480px) {
   .main-nav {
-    inset: 0 40% 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
   }
   .logo {
+    object-fit: contain;
     margin-inline-start: var(--size-10);
+    z-index: var(--layer-5);
   }
 }
 
