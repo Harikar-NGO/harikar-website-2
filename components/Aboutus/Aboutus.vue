@@ -55,13 +55,13 @@
 }
 .stats {
   display: flex;
-  align-item: center;
+  align-items: center;
   justify-content: space-around;
 }
 .stats-item {
   display: flex;
   flex-direction: column;
-  align-item: center;
+  align-items: center;
   justify-content: center;
   gap: var(--size-6);
 }
