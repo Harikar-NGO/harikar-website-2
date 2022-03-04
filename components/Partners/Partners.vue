@@ -1,63 +1,32 @@
 <template>
-  <div class="main-wrap">
-    <div>
-      <p class="quote">
-        Provision of required services to destitute people is not a task of
-        charity, rather an act of humanity and justice.
-      </p>
-      <footer>- Salah Y. Majid</footer>
+  <div class="main-wrap surface3">
+    <div class="section-title">
+      <Title title="Our Partners" />
+    </div>
+    <div class="container">
+      <div class="media-scroller snaps-inline">
+        <div
+          class="media-element"
+          v-for="(partner, index) in partners"
+          :key="index"
+        >
+          <a :href="'https://' + partner.link" target="_blank">
+            <img
+              class="partner-logo"
+              :src="partner.img"
+              :alt="partner.title + ' logo'"
+              max-width="100%"
+              max-height="100%"
+            />
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-.main-wrap {
-  padding-block: var(--size-4);
-  padding-inline: var(--size-8);
-  display: grid;
-  place-items: center;
-  background: var(--surface3);
-  background-image: var(--gradient-29);
-}
-
-.quote {
-  font-size: var(--font-size-fluid-1);
-  /* quotes: "\201C""\201D""\2018""\2019"; */
-  padding-block: var(--size-2);
-  padding-inline: var(--size-4);
-  line-height: var(--font-lineheight-2);
-  max-width: var(--size-content-3);
-}
-
-.quote::before {
-  content: open-quote;
-  display: inline;
-  line-height: 0;
-  left: -0.1em;
-  position: relative;
-  top: 0.5em;
-  color: var(--brand);
-  font-size: 3em;
-}
-.quote::after {
-  content: close-quote;
-  display: inline;
-  line-height: 0;
-  left: 0.1em;
-  position: relative;
-  top: 0.5em;
-  color: var(--brand);
-  font-size: 3em;
-}
-footer {
-  margin: 0;
-  text-align: right;
-  font-size: var(--font-size-fluid-1);
-  font-style: italic;
-}
-</style>
-
 <script setup>
+import Title from "../Titles/title-right";
 const partners = [
   {
     title: "UNHCR",
@@ -136,3 +105,7 @@ const partners = [
   },
 ];
 </script>
+
+<style scoped>
+@import "./partners.css";
+</style>

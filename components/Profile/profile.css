@@ -1,0 +1,131 @@
+.main-wrap {
+  padding-inline: var(--size-4);
+  padding-top: var(--size-fluid-1);
+  padding-bottom: var(--size-10);
+  display: grid;
+  justify-items: center;
+  grid-gap: var(--size-fluid-1);
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .main-wrap {
+    padding-inline: var(--size-13);
+  }
+}
+
+.tab-panel p {
+  font-size: var(--font-size-fluid-0);
+  padding-block: var(--size-2);
+  line-height: var(--font-lineheight-3);
+}
+
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+  padding: var(--size-fluid-2);
+}
+
+.tab-panel {
+  min-width: 100%;
+}
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px 25px;
+  border: var(--border-size-1) solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 30%;
+  font-size: var(--font-size-fluid-0);
+}
+
+@media (min-width: 480px) {
+  .tabset > label {
+    min-width: max-content;
+  }
+}
+
+.tabset {
+  position: relative;
+}
+
+.tabset::before {
+  content: "Our";
+  color: var(--brand);
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-6);
+}
+
+@media (min-width: 480px) {
+  .tabset::before {
+    top: -4rem;
+    font-size: var(--font-size-6);
+  }
+}
+
+@media (min-width: 1250px) {
+  .tabset::before {
+    top: 0;
+    left: -8rem;
+  }
+}
+
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: var(--text1);
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: var(--brand);
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: var(--brand);
+}
+
+.tabset > input:checked + label {
+  border-color: var(--text1);
+  border-bottom: var(--border-size-1) solid var(--surface1);
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: var(--border-size-1) solid var(--text1);
+}
+
+.mission {
+  column-count: 2;
+}
+
+.values {
+  column-count: 2;
+}

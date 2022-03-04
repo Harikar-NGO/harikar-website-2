@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap surface1">
     <div class="section-title">
-      <title-left title="Our Office" />
+      <Title title="Our Office" />
     </div>
     <div class="address">
       <p class="address-title">Head Quarter</p>
@@ -31,73 +31,8 @@
   </div>
 </template>
 
-<style scoped>
-.main-wrap {
-  padding-block: var(--size-10);
-  padding-inline: var(--size-4);
-  display: grid;
-  grid-template:
-    "title" 0.2fr
-    "address"
-    "content" 2fr / 1fr;
-
-  place-items: center;
-  grid-row-gap: var(--size-8);
-}
-@media (min-width: 850px) {
-  .main-wrap {
-    grid-template:
-      "title content" 1fr
-      "address content" 3fr / 1fr 2fr;
-    padding-block: var(--size-12);
-    padding-inline: var(--size-12);
-    grid-row-gap: var(--size-11);
-  }
-}
-
-.title {
-  grid-area: section-title;
-}
-
-.address {
-  grid-area: address;
-  display: grid;
-  gap: var(--size-3);
-  background: var(--surface3);
-  padding: var(--size-fluid-2);
-  box-shadow: var(--shadow-2);
-  border-radius: var(--radius-2);
-}
-
-.address-title {
-  color: var(--brand);
-  font-size: var(--font-size-fluid-1);
-  font-weight: var(--font-weight-6);
-}
-
-.address-item {
-  font-size: var(--font-size-fluid-0);
-}
-
-.address-item span {
-  color: var(--brand);
-}
-
-.content {
-  grid-area: content;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--radius-2);
-  box-shadow: var(--shadow-2);
-}
-@media (min-width: 850px) {
-  .content {
-    width: 70%;
-  }
-}
-</style>
-
 <script setup>
+import Title from "../Titles/title-left";
 let expertiseList = ref([
   ["General Protection", "GBV", "Legal Assistance"],
   ["Livelihood", "PSEA Trainings", "WASH"],
@@ -114,3 +49,7 @@ const flipList = () => {
 };
 setInterval(flipList, 2800);
 </script>
+
+<style scoped>
+@import "./address.css";
+</style>
