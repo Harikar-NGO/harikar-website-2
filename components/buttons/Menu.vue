@@ -38,7 +38,6 @@ const emit = defineEmits(["openNav"]);
   top: 0;
   bottom: 0;
   left: 5%;
-  right: 0;
   z-index: var(--layer-important);
 }
 .menu > svg {
