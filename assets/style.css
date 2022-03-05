@@ -22,7 +22,7 @@ html {
   --shadow-strength-light: 5%;
 
   /* dark */
-  --brand-dark: hsl(226 38% 47% / 1);
+  --brand-dark: hsl(226 50% 47% / 1);
   --text1-dark: var(--gray-1);
   --text2-dark: var(--gray-3);
   --surface1-dark: var(--gray-9);
