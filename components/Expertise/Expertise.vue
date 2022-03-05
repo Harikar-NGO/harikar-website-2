@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap surface1">
     <div class="section-title">
-      <Title title="Our Expertise" />
+      <Title title="Our Expertise" left />
     </div>
     <div class="content">
       <p class="content-title">
@@ -16,6 +16,7 @@
           :class="{ active: isActive && index === 1 }"
         >
           <button
+            tabindex="-1"
             v-for="(item, index) in list"
             :key="index"
             class="expertise-btn"
@@ -30,24 +31,23 @@
 </template>
 
 <script setup>
- import Tint from "../Shapes/Tint.vue"
- import Title from "../Titles/title-left";
+import Tint from "../Shapes/Tint.vue";
 
- const isActive = ref(true);
+const isActive = ref(true);
 
- let expertiseList = ref([
-   ["General Protection", "GBV", "Legal Assistance"],
-   ["Livelihood", "PSEA Trainings", "WASH"],
-   ["Reproductive Health", "Child Protection", "Green Houses"],
-   ["Awarness raising", "PSS", "Case managment"],
- ]);
- const flipList = () => {
-   let array = expertiseList.value;
-   array.unshift(array.pop());
-   return array;
- };
+let expertiseList = ref([
+  ["General Protection", "GBV", "Legal Assistance"],
+  ["Livelihood", "PSEA Trainings", "WASH"],
+  ["Reproductive Health", "Child Protection", "Green Houses"],
+  ["Awarness raising", "PSS", "Case managment"],
+]);
+const flipList = () => {
+  let array = expertiseList.value;
+  array.unshift(array.pop());
+  return array;
+};
 
- setInterval(flipList, 2800);
+setInterval(flipList, 2800);
 </script>
 
 <style scoped>

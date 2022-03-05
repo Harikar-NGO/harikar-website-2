@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap surface3">
     <div class="section-title">
-      <Title title="Our Projects" />
+      <Title title="Our Projects" right />
     </div>
     <div class="container">
       <div class="media-scroller snaps-inline">
@@ -28,8 +28,7 @@
 </template>
 
 <script setup>
- import Title from "../Titles/title-right";
- import Tint from "../Shapes/Tint.vue"
+import Tint from "../Shapes/Tint.vue";
 const getImg = (id) => {
   return `https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/projects/project-${id}.webp`;
 };

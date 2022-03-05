@@ -1,5 +1,5 @@
 .main-wrap {
-  padding-block: var(--size-4);
+  padding-block: var(--size-8);
   padding-inline: var(--size-8);
   display: grid;
   place-items: center;
@@ -14,6 +14,7 @@
   padding-inline: var(--size-4);
   line-height: var(--font-lineheight-2);
   max-width: var(--size-content-3);
+  color: var(--gray-7);
 }
 
 .quote::before {
@@ -41,4 +42,5 @@ footer {
   text-align: right;
   font-size: var(--font-size-fluid-1);
   font-style: italic;
+  color: var(--gray-7);
 }

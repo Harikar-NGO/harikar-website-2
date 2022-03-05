@@ -1,28 +1,30 @@
 .main-wrap {
-  padding-block: var(--size-10);
+  padding-top: var(--size-8);
+  padding-bottom: var(--size-10);
+  padding-inline: var(--size-4);
   display: grid;
   grid-template:
     "title" 0.2fr
     "content" 2fr / 1fr;
-
-  place-items: center;
+  place-items: start;
+  gap: var(--size-4);
 }
-@media (min-width: 850px) {
+@media (min-width: 950px) {
   .main-wrap {
     grid-template: "title content" / 1fr 2fr;
     padding-top: var(--size-12);
     padding-bottom: var(--size-11);
     gap: var(--size-8);
+    place-items: center;
   }
 }
 
-.title {
-  grid-area: section-title;
+.section-title {
+  grid-area: title;
 }
 
 .content {
   grid-area: content;
-  padding: var(--size-6);
   display: flex;
   flex-direction: column;
   gap: var(--size-5);

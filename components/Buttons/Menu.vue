@@ -85,7 +85,7 @@ const emit = defineEmits(["openNav"]);
   stroke-dashoffset: -134;
   /* stroke-width: 6; */
 }
-@media (min-width: 850px) {
+@media (min-width: 950px) {
   .menu {
     display: none;
   }

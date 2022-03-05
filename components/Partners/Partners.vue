@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap surface3">
     <div class="section-title">
-      <Title title="Our Partners" />
+      <Title title="Our Partners" right />
     </div>
     <div class="container">
       <div class="media-scroller snaps-inline">
@@ -26,7 +26,6 @@
 </template>
 
 <script setup>
-import Title from "../Titles/title-right";
 const partners = [
   {
     title: "UNHCR",

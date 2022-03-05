@@ -3,10 +3,9 @@
 }
 .title h2 {
   font-size: var(--font-size-fluid-2);
-  text-shadow: 0 1px 0 var(--brand);
-  color: var(--brand);
+  color: var(--text1);
 }
-@media (min-width: 850px) {
+@media (min-width: 950px) {
   .title {
     place-items: center;
     position: relative;
@@ -15,18 +14,17 @@
   .title h2 {
     width: 5ch;
   }
-  .title-left::before,
-  .title-left::after,
-  .title-right::before,
-  .title-right::after {
+  .left::before,
+  .left::after,
+  .right::before,
+  .right::after {
     content: "";
     position: absolute;
     z-index: -1;
     border-radius: var(--radius-3);
   }
-  .title-left::before,
-  .title-right::before {
-    top: -4em;
+  .left::before,
+  .right::before {
     left: -2em;
     background: var(--surface3);
     background-image: var(--gradient-29);
@@ -34,25 +32,28 @@
     height: 15em;
     box-shadow: var(--shadow-3);
   }
-  .title-left::before {
+  .left::before {
+    top: -4em;
     transform: rotate(48deg);
   }
-  .title-right::before {
+  .right::before {
+    top: -5em;
     transform: rotate(42deg);
   }
-  .title-left::after,
-  .title-right::after {
-    top: -5em;
+  .left::after,
+  .right::after {
     left: -3em;
     border: var(--border-size-1) solid var(--brand);
     width: 17em;
     height: 17em;
     box-shadow: var(--shadow-2);
   }
-  .title-left::after {
+  .left::after {
+    top: -5em;
     transform: rotate(42deg);
   }
-  .title-right::after {
+  .right::after {
+    top: -6em;
     transform: rotate(48deg);
   }
 }

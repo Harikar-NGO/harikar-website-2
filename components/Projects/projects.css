@@ -2,25 +2,26 @@
   padding-block: var(--size-8);
   display: grid;
   grid-template:
-    "title" 0.5fr
+    "title" 0.2fr
     "content" 2fr / 1fr;
-  place-items: center;
+  place-items: start;
   position: relative;
-  gap: var(--size-8);
+  gap: var(--size-4);
 }
 
-@media (min-width: 850px) {
+@media (min-width: 950px) {
   .main-wrap {
     grid-template: "content title" / 2fr 1fr;
-    padding-bottom: var(--size-12);
-    padding-top: var(--size-10);
-    padding-inline: var(--size-10);
-    gap: var(--size-4);
+    padding-block: var(--size-11);
+    padding-right: var(--size-10);
+    gap: var(--size-8);
+    place-items: center;
   }
 }
 
 .section-title {
   grid-area: title;
+  padding-left: var(--size-4);
 }
 
 .container {
@@ -28,6 +29,7 @@
   overflow-x: hidden;
   max-width: 100%;
 }
+
 .media-scroller {
   --_spacer: var(--size-3);
   display: grid;

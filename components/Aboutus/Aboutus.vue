@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap surface1">
     <div class="section-title">
-      <Title title="About us" />
+      <Title title="About us" left />
     </div>
     <div class="content">
       <p class="content-title">
@@ -18,7 +18,6 @@
 </template>
 
 <script setup>
-import Title from "../Titles/title-left";
 const statsItems = [
   {
     title: "emplyees",

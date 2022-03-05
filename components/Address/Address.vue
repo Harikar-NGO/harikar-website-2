@@ -1,7 +1,7 @@
 <template>
   <div class="main-wrap surface1">
     <div class="section-title">
-      <Title title="Our Office" />
+      <Title title="Our Office" left />
     </div>
     <div class="address">
       <p class="address-title">Head Quarter</p>
@@ -32,7 +32,6 @@
 </template>
 
 <script setup>
-import Title from "../Titles/title-left";
 let expertiseList = ref([
   ["General Protection", "GBV", "Legal Assistance"],
   ["Livelihood", "PSEA Trainings", "WASH"],

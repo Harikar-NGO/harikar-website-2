@@ -16,7 +16,7 @@
   display: none;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 950px) {
   .triangle {
     display: block;
     position: absolute;
