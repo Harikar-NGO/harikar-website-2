@@ -12,6 +12,7 @@
         >
           <a :href="'https://' + partner.link" target="_blank">
             <img
+              loading="lazy"
               class="partner-logo"
               :src="partner.img"
               :alt="partner.title + ' logo'"

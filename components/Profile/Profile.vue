@@ -85,7 +85,7 @@
             awareness courses on civil rights.
           </p>
         </section>
-        <section id="cooperation" class="coordination tab-panel">
+        <section id="Coordination" class="coordination tab-panel">
           <p>
             Harikar NGO works and coordinates with local Governmental
             Institutions, Civil Society Organizations, United Nation Agencies,

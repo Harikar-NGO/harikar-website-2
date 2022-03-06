@@ -18,8 +18,8 @@
       <img
         src="https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/cover.webp"
         alt="A mother with three young kids"
-        width="100%"
-        height="auto"
+        width="964"
+        height="723"
       />
     </picture>
     <Triangle />

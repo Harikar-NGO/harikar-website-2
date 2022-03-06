@@ -12,8 +12,7 @@
 @media (min-width: 950px) {
   .main-wrap {
     grid-template: "title content" / 1fr 2fr;
-    padding-top: var(--size-12);
-    padding-bottom: var(--size-11);
+    padding-block: var(--size-12);
     gap: var(--size-8);
     place-items: center;
   }

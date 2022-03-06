@@ -1,0 +1,5 @@
+footer {
+  display: grid;
+  padding-block: var(--size-fluid-1);
+  background: var(--surface1);
+}

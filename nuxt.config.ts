@@ -5,4 +5,9 @@ export default defineNuxtConfig({
   components: true,
   css: ["~/assets/style.css", "@mdi/font/css/materialdesignicons.min.css"],
   modules: ["@nuxtjs/color-mode"],
+  head: {
+    title: "Harikar NGO website",
+    lang: "en",
+    meta: [{ description: "Harikar NGO's main website" }],
+  },
 });

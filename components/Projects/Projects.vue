@@ -11,10 +11,11 @@
           class="media-element"
         >
           <img
+            loading="lazy"
             alt="an image from the project"
             :src="getImg(project.id)"
-            width="100%"
-            height="auto"
+            width="208"
+            height="125"
           />
           <p class="media-element__title">
             {{ project.name.substr(0, 25) + "..." }}

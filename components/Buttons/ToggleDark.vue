@@ -1,6 +1,14 @@
 <template>
   <div class="btn nav-button-dark">
-    <input type="checkbox" @change="toggleTheme" id="toggle" class="toggle" />
+    <input
+      aria-hidden="true"
+      type="checkbox"
+      @change="toggleTheme"
+      id="toggle"
+      class="toggle"
+      tabindex="-1"
+    />
+    <label hidden for="toggle">toggle dark mode</label>
   </div>
 </template>
 
@@ -17,7 +25,6 @@ const toggleTheme = () => {
 <style scoped>
 .toggle {
   --size: var(--font-size-4);
-
   appearance: none;
   outline: none;
   cursor: pointer;
