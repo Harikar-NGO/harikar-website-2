@@ -1,15 +1,62 @@
 <template>
   <footer>
     <div class="info">
-      <img alt="" src="/harikar-logo.svg" />
+      <img alt="" src="/harikar-logo.svg" width="40" height="80" />
       <p>
         We have been working in the humanitarian sector for more than a decade,
         helping people is in our name.
       </p>
       <p>© Harikar NGO - All Rights Reserved 2021</p>
     </div>
-    <div class="links"></div>
-    <div class="social"></div>
+    <div class="links">
+      <div class="list harikar">
+        <h2 class="list-title">harikar</h2>
+        <ul class="list-items">
+          <li class="list-item"><a href="">executive board</a></li>
+          <li class="list-item"><a href="#profile">profile</a></li>
+          <li class="list-item"><a href="">Legal Status</a></li>
+        </ul>
+      </div>
+      <div class="list ref">
+        <h2 class="list-title">references</h2>
+        <ul class="list-items">
+          <li class="list-item"><a href="">policies</a></li>
+        </ul>
+      </div>
+      <div class="list other">
+        <h2 class="list-title">other</h2>
+        <ul class="list-items">
+          <li class="list-item"><a href="/contact">contact us</a></li>
+          <li class="list-item"><a href="#address">address</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="social">
+      <a href="">
+        <img
+          alt="link to harikar's facebook page"
+          src="icons8-facebook.svg"
+          width="35"
+          height="35"
+        />
+      </a>
+      <a href="">
+        <img
+          alt="link to harikar's youtube channel"
+          src="icons8-youtube.svg"
+          width="35"
+          height="35"
+        />
+      </a>
+      <a href="">
+        <img
+          alt="link to harikar's instagram page"
+          src="icons8-instagram.svg"
+          width="35"
+          height="35"
+        />
+      </a>
+    </div>
   </footer>
 </template>
 

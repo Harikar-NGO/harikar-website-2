@@ -6,7 +6,7 @@
     "title" 0.2fr
     "address"
     "content" 2fr / 1fr;
-  place-items: start;
+  place-items: center;
   gap: var(--size-4);
 }
 
@@ -21,11 +21,11 @@
 @media (min-width: 950px) {
   .main-wrap {
     grid-template:
-      "title content" 2fr
-      ". content" 1fr
-      "address content" 3fr / 1fr 2fr;
+      "title address" 1fr
+      ". address" 1fr
+      "content content" 3fr / 1fr 2fr;
     padding-block: var(--size-12);
-    padding-inline: var(--size-10);
+    padding-inline: var(--size-12);
     gap: var(--size-8);
     place-items: center;
   }
@@ -33,6 +33,13 @@
 
 .section-title {
   grid-area: title;
+  place-self: start;
+}
+
+@media (min-width: 950px) {
+  .section-title {
+    place-self: center;
+  }
 }
 
 .address {
@@ -40,24 +47,27 @@
   display: grid;
   gap: var(--size-3);
   background: var(--surface3);
-  padding: var(--size-fluid-2);
+  padding: var(--size-3);
   box-shadow: var(--shadow-2);
   border-radius: var(--radius-2);
-  width: 100%;
+  max-width: max-content;
 }
 
 .address-title {
-  color: var(--brand);
+  color: var(--text1);
   font-size: var(--font-size-fluid-1);
   font-weight: var(--font-weight-6);
 }
 
 .address-item {
   font-size: var(--font-size-fluid-0);
+  color: var(--text2);
+  display: flex;
+  gap: var(--size-3);
 }
 
-.address-item span {
-  color: var(--brand);
+.address-item i {
+  color: var(--text1);
 }
 
 .content {
@@ -67,6 +77,12 @@
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-2);
 }
+iframe,
+object,
+embed {
+  max-width: 100%;
+}
+
 @media (min-width: 850px) {
   .content {
     width: 70%;

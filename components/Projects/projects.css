@@ -35,12 +35,19 @@
   display: grid;
   grid-auto-flow: column;
   gap: var(--_spacer);
-  grid-auto-columns: 12rem;
+  grid-auto-columns: 10rem;
   padding-inline: var(--_spacer);
   padding-block: var(--_spacer);
   overflow-x: auto;
   overscroll-behavior-inline: contain;
 }
+
+@media (min-width: 450px) {
+  .media-scroller {
+    grid-auto-columns: 12rem;
+  }
+}
+
 .media-element {
   display: grid;
   grid-template-rows: min-content;

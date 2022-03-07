@@ -5,8 +5,8 @@
       <img
         alt="Harikar NGO's logo"
         src="/harikar-logo.svg"
-        width="40px"
-        height="80px"
+        width="40"
+        height="80"
       />
     </a>
     <nav class="nav">

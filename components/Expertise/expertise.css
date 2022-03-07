@@ -5,7 +5,7 @@
   grid-template:
     "title" 0.2fr
     "content" 2fr / 1fr;
-  place-items: start;
+  place-items: center;
   position: relative;
   gap: var(--size-4);
 }
@@ -19,8 +19,15 @@
   }
 }
 
-.title {
-  grid-area: section-title;
+.section-title {
+  grid-area: title;
+  place-self: start;
+}
+
+@media (min-width: 950px) {
+  .section-title {
+    place-self: center;
+  }
 }
 
 .content {
@@ -56,7 +63,8 @@
 
 .active > button {
   background: var(--brand);
-  color: var(--gray-2);
+  color: var(--gray-1);
   border-radius: var(--radius-2);
   animation: var(--animation-slide-in-down);
+  cursor: default;
 }

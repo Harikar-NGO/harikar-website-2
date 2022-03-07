@@ -5,16 +5,18 @@
     </div>
     <div class="address">
       <p class="address-title">Head Quarter</p>
-      <p class="address-item">
-        <span><i class="mdi mdi-phone"></i></span> +964 773 697 1165
-      </p>
-      <p class="address-item">
-        <span><i class="mdi mdi-email"></i></span> info@harikar.org
-      </p>
-      <p class="address-item">
-        <span><i class="mdi mdi-map-marker"></i></span> Australia St, Media
-        Quarter, 99448 Duhok, KR-Iraq
-      </p>
+      <div class="address-item">
+        <div><i class="mdi mdi-phone"></i></div>
+        <p>+964 773 697 1165</p>
+      </div>
+      <div class="address-item">
+        <div><i class="mdi mdi-email"></i></div>
+        <p>info@harikar.org</p>
+      </div>
+      <div class="address-item">
+        <div><i class="mdi mdi-map-marker"></i></div>
+        <p>Australia St, Media Quarter, 99448 Duhok, KR-Iraq</p>
+      </div>
     </div>
     <div class="content">
       <iframe

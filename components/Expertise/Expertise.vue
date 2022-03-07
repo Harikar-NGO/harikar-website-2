@@ -47,7 +47,7 @@ const flipList = () => {
   return array;
 };
 
-setInterval(flipList, 2800);
+setInterval(flipList, 4000);
 </script>
 
 <style scoped>

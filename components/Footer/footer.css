@@ -2,4 +2,38 @@ footer {
   display: grid;
   padding-block: var(--size-fluid-1);
   background: var(--surface1);
+  grid-template: "info links social" / 1fr 2fr 1fr;
+  box-shadow: var(--inner-shadow-1);
+}
+
+.info {
+  grid-area: info;
+}
+
+.links {
+  grid-area: links;
+  display: grid;
+  grid-template: "harikar ref other";
+}
+
+.social {
+  grid-area: social;
+}
+
+.harikar {
+  grid-area: harikar;
+}
+
+.ref {
+  grid-area: ref;
+}
+
+.other {
+  grid-area: other;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+  align-self: start;
 }

@@ -7,7 +7,19 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/color-mode"],
   head: {
     title: "Harikar NGO website",
-    lang: "en",
-    meta: [{ description: "Harikar NGO's main website" }],
+    htmlAttrs: {
+      lang: "en",
+    },
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      {
+        hid: "description",
+        name: "description",
+        content: "Harikar NGO website",
+      },
+    ],
   },
 });

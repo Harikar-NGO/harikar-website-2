@@ -24,6 +24,7 @@ header {
   text-transform: capitalize;
   font-size: var(--font-size-3);
   line-height: var(--font-lineheight-5);
+  overflow-y: auto;
 }
 
 .main-nav li a {
