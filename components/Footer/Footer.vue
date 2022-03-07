@@ -1,16 +1,21 @@
 <template>
   <footer>
     <div class="info">
-      <img alt="" src="/harikar-logo.svg" width="40" height="80" />
-      <p>
+      <div class="brand">
+        <img alt="" src="/harikar-logo.svg" width="40" height="80" />
+        <p>Harikar NGO</p>
+      </div>
+      <p class="info-text">
         We have been working in the humanitarian sector for more than a decade,
         helping people is in our name.
       </p>
+    </div>
+    <div class="copyright">
       <p>© Harikar NGO - All Rights Reserved 2021</p>
     </div>
     <div class="links">
       <div class="list harikar">
-        <h2 class="list-title">harikar</h2>
+        <p class="list-title">harikar</p>
         <ul class="list-items">
           <li class="list-item"><a href="">executive board</a></li>
           <li class="list-item"><a href="#profile">profile</a></li>
@@ -18,13 +23,13 @@
         </ul>
       </div>
       <div class="list ref">
-        <h2 class="list-title">references</h2>
+        <p class="list-title">references</p>
         <ul class="list-items">
           <li class="list-item"><a href="">policies</a></li>
         </ul>
       </div>
       <div class="list other">
-        <h2 class="list-title">other</h2>
+        <p class="list-title">other</p>
         <ul class="list-items">
           <li class="list-item"><a href="/contact">contact us</a></li>
           <li class="list-item"><a href="#address">address</a></li>

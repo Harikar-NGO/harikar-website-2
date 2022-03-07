@@ -1,19 +1,87 @@
 footer {
   display: grid;
-  padding-block: var(--size-fluid-1);
+  padding-block: var(--size-6);
+  padding-inline: var(--size-4);
   background: var(--surface1);
-  grid-template: "info links social" / 1fr 2fr 1fr;
-  box-shadow: var(--inner-shadow-1);
+  grid-template:
+    "info"
+    "links"
+    "social"
+    "copy" / 1fr;
+  gap: var(--size-8);
+  justify-items: center;
+  align-items: start;
+  justify-content: center;
+}
+
+@media (min-width: 950px) {
+  footer {
+    gap: var(--size-6);
+    padding-inline: var(--size-10);
+    grid-template:
+      "info links social"
+      "copy links social"/ 1fr 2fr 1fr;
+  }
+}
+
+@media (min-width: 1400px) {
+  footer {
+    padding-inline: var(--size-13);
+  }
 }
 
 .info {
   grid-area: info;
+  display: grid;
+  gap: var(--size-3);
+  place-items: center;
+}
+
+.brand {
+  display: flex;
+  place-items: center;
+  gap: var(--size-4);
+}
+
+.brand > p {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+}
+
+.info-text {
+  font-size: var(--font-size-0);
+  max-width: var(--size-content-2);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media (min-width: 950px) {
+  .info {
+    place-items: start;
+  }
+  .info-text {
+    max-width: 35;
+  }
+}
+
+.copyright > p {
+  grid-area: copy;
+  font-size: var(--font-size-0);
 }
 
 .links {
   grid-area: links;
   display: grid;
-  grid-template: "harikar ref other";
+  grid-template: "harikar" "ref" "other";
+  grid-gap: var(--size-4);
+  align-items: start;
+}
+
+@media (min-width: 450px) {
+  .links {
+    grid-template: "harikar ref other";
+    grid-gap: var(--size-8);
+  }
 }
 
 .social {
@@ -22,6 +90,42 @@ footer {
 
 .harikar {
   grid-area: harikar;
+}
+
+.list {
+  display: grid;
+  gap: var(--size-3);
+}
+
+.list-title {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-6);
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.list-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-1);
+  display: flex;
+  gap: var(--size-3);
+}
+
+@media (min-width: 450px) {
+  .list-items {
+    flex-direction: column;
+  }
+}
+
+.list-item > a {
+  color: var(--text2);
+  text-decoration: none;
+}
+
+.list-item > a:hover {
+  color: var(--brand);
 }
 
 .ref {
@@ -35,5 +139,4 @@ footer {
 .social {
   display: flex;
   gap: 1rem;
-  align-self: start;
 }

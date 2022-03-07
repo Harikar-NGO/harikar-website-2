@@ -36,12 +36,12 @@
   display: grid;
   grid-template-columns: max-content;
   line-height: var(--font-lineheight-0);
-  color: var(--text1);
+  color: var(--gray-1);
   font-size: var(--font-size-fluid-3);
 }
 
 .under-hero {
-  color: var(--text2);
+  color: var(--gray-3);
   font-size: var(--font-size-fluid-);
   margin-block-end: var(--size-3);
   font-weight: var(--font-weight-6);
