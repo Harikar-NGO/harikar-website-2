@@ -64,6 +64,12 @@ footer {
   }
 }
 
+@media (min-width: 950px) {
+  .copyright {
+    justify-self: start;
+  }
+}
+
 .copyright > p {
   grid-area: copy;
   font-size: var(--font-size-0);
@@ -101,7 +107,7 @@ footer {
   font-size: var(--font-size-1);
   font-weight: var(--font-weight-6);
   text-transform: uppercase;
-  color: var(--brand);
+  color: var(--text1);
 }
 
 .list-items {
