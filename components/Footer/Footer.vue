@@ -32,26 +32,29 @@
       </div>
     </div>
     <div class="social">
-      <a href="">
+      <a href="https://www.facebook.com/Harikar2004/" target="__blank">
         <img
           alt="link to harikar's facebook page"
-          src="icons8-facebook.svg"
+          src="/icons8-facebook.svg"
           width="35"
           height="35"
         />
       </a>
-      <a href="">
+      <a
+        href="https://www.youtube.com/channel/UCfAUdyLGTADpz5yi7f3OFFg"
+        target="__blank"
+      >
         <img
           alt="link to harikar's youtube channel"
-          src="icons8-youtube.svg"
+          src="/icons8-youtube.svg"
           width="35"
           height="35"
         />
       </a>
-      <a href="">
+      <a href="https://www.instagram.com/harikarngo/" target="__blank">
         <img
           alt="link to harikar's instagram page"
-          src="icons8-instagram.svg"
+          src="/icons8-instagram.svg"
           width="35"
           height="35"
         />
