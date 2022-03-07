@@ -13,6 +13,7 @@
   }
   .title h2 {
     width: 5ch;
+    color: var(--gray-1);
   }
   .left::before,
   .left::after,
@@ -27,7 +28,7 @@
   .right::before {
     left: -2em;
     background: var(--surface3);
-    background-image: var(--gradient-29);
+    background-image: var(--gradient-brand);
     width: 15em;
     height: 15em;
     box-shadow: var(--shadow-3);

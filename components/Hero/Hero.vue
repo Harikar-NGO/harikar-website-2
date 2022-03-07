@@ -10,7 +10,7 @@
       </p>
       <div class="button-list animate-top-down">
         <button class="primary">
-          write to us <span><i class="mdi mdi-send"></i></span>
+          write to us <span><SendIcon color="var(--gray-3)" /></span>
         </button>
       </div>
     </div>
@@ -27,6 +27,7 @@
 </template>
 
 <script setup>
+import SendIcon from "../Icons/SendIcon.vue";
 import Triangle from "../Shapes/Triangle.vue";
 </script>
 

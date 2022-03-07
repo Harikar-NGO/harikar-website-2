@@ -6,15 +6,15 @@
     <div class="address">
       <p class="address-title">Head Quarter</p>
       <div class="address-item">
-        <div><i class="mdi mdi-phone"></i></div>
+        <PhoneIcon color="var(--text1)" />
         <p>+964 773 697 1165</p>
       </div>
       <div class="address-item">
-        <div><i class="mdi mdi-email"></i></div>
+        <EmailIcon color="var(--text1)" />
         <p>info@harikar.org</p>
       </div>
       <div class="address-item">
-        <div><i class="mdi mdi-map-marker"></i></div>
+        <LocationIcon color="var(--text1)" />
         <p>Australia St, Media Quarter, 99448 Duhok, KR-Iraq</p>
       </div>
     </div>
@@ -34,6 +34,10 @@
 </template>
 
 <script setup>
+import PhoneIcon from "../Icons/PhoneIcon.vue";
+import EmailIcon from "../Icons/EmailIcon.vue";
+import LocationIcon from "../Icons/LocationIcon.vue";
+
 let expertiseList = ref([
   ["General Protection", "GBV", "Legal Assistance"],
   ["Livelihood", "PSEA Trainings", "WASH"],

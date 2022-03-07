@@ -20,6 +20,14 @@ html {
   --surface4-light: var(--gray-3);
   --surface-shadow-light: 200 10% 20%;
   --shadow-strength-light: 5%;
+  --gradient-light: linear-gradient(
+    55deg,
+    hsl(210deg 54% 55%) 0%,
+    hsl(210deg 44% 64%) 80%,
+    hsl(209deg 35% 74%) 96%,
+    hsl(210deg 26% 83%) 101%,
+    hsl(210deg 16% 93%) 100%
+  );
 
   /* dark */
   --brand-dark: hsl(226 38% 47% / 1);
@@ -31,6 +39,15 @@ html {
   --surface4-dark: var(--gray-6);
   --surface-shadow-dark: 200 50% 3%;
   --shadow-strength-dark: 40%;
+  --gradient-dark: linear-gradient(
+    55deg,
+    hsl(210deg 46% 45%) 0%,
+    hsl(210deg 37% 42%) 80%,
+    hsl(210deg 28% 38%) 96%,
+    hsl(210deg 18% 35%) 101%,
+    hsl(210deg 9% 31%) 100%
+  );
+
 }
 
 :root {
@@ -46,6 +63,7 @@ html {
   --surface4: var(--surface4-light);
   --surface-shadow: var(--surface-shadow-light);
   --shadow-strength: var(--shadow-strength-light);
+  --gradient-brand: var(--gradient-light)
 }
 
 @media (prefers-color-scheme: dark) {
@@ -61,6 +79,7 @@ html {
     --surface4: var(--surface4-dark);
     --surface-shadow: var(--surface-shadow-dark);
     --shadow-strength: var(--shadow-strength-dark);
+    --gradient-brand: var(--gradient-dark)
   }
 }
 
@@ -74,6 +93,7 @@ html {
   --surface4: var(--surface4-light);
   --surface-shadow: var(--surface-shadow-light);
   --shadow-strength: var(--shadow-strength-light);
+  --gradient-brand: var(--gradient-light)
 }
 
 .dark-mode {
@@ -86,6 +106,7 @@ html {
   --surface4: var(--surface4-dark);
   --surface-shadow: var(--surface-shadow-dark);
   --shadow-strength: var(--shadow-strength-dark);
+  --gradient-brand: var(--gradient-dark)
 }
 
 html {

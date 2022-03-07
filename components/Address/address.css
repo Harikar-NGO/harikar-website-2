@@ -66,7 +66,7 @@
   gap: var(--size-3);
 }
 
-.address-item i {
+.address-item > img {
   color: var(--text1);
 }
 

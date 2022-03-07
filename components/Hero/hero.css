@@ -5,7 +5,7 @@
     "hero"
     "image" 10rem;
   background: var(--surface3);
-  background-image: var(--gradient-29);
+  background-image: var(--gradient-brand);
   overflow-x: hidden;
   position: relative;
 }
@@ -36,12 +36,12 @@
   display: grid;
   grid-template-columns: max-content;
   line-height: var(--font-lineheight-0);
-  color: var(--brand);
+  color: var(--text1);
   font-size: var(--font-size-fluid-3);
 }
 
 .under-hero {
-  color: var(--gray-7);
+  color: var(--text2);
   font-size: var(--font-size-fluid-);
   margin-block-end: var(--size-3);
   font-weight: var(--font-weight-6);
@@ -64,16 +64,18 @@
 }
 
 button {
-  font-size: var(--font-size-fluid-0);
+  font-size: var(--font-size-0);
   padding-inline: var(--size-fluid-2);
   padding-block: var(--size-fluid-1);
   border-radius: var(--radius-2);
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-3);
   background: var(--brand);
-  color: var(--gray-2);
+  color: var(--gray-1);
+  font-weight: var(--font-weight-6);
   text-transform: uppercase;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: var(--size-3);
 }
 
 button:hover {
