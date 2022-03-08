@@ -37,18 +37,8 @@ header {
   color: var(--brand);
 }
 
-.active {
-  position: relative;
-}
-
-.active::before {
-  content: "";
-  border-bottom: var(--border-size-3) solid var(--brand);
-  position: absolute;
-  top: 0;
-  bottom: -1rem;
-  left: 0;
-  right: 0;
+.main-nav li .active {
+  color: var(--brand);
 }
 
 .logo {

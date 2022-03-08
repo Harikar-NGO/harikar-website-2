@@ -107,7 +107,7 @@ footer {
   font-size: var(--font-size-1);
   font-weight: var(--font-weight-6);
   text-transform: uppercase;
-  color: var(--text1);
+  color: var(--brand);
 }
 
 .list-items {

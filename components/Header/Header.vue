@@ -1,7 +1,7 @@
 <template>
   <header>
     <Menu @openNav="openNav" :isOpen="open" class="menu-button" />
-    <a :href="currentRoute === 'index' ? '#home' : '/#home'" class="logo">
+    <a :href="route.name === 'index' ? '#home' : '/#home'" class="logo">
       <img
         alt="Harikar NGO's logo"
         src="/harikar-logo.svg"
@@ -12,9 +12,24 @@
     <nav class="nav">
       <ul class="main-nav" :class="{ opened: open }">
         <li v-for="item in navItems" :key="item.index">
-          <a :href="currentRoute === 'index' ? item.link : item.xlink">{{
-            item.name
-          }}</a>
+          <a
+            :href="route.name === 'index' ? item.link : item.xlink"
+            @click="closeNav"
+            :class="{
+              active: route.hash === item.link || route.name === item.name,
+            }"
+            >{{ item.name }}</a
+          >
+        </li>
+        <li>
+          <a
+            href="/reports"
+            @click="closeNav"
+            :class="{
+              active: route.name.includes('reports'),
+            }"
+            >reports</a
+          >
         </li>
       </ul>
     </nav>
@@ -35,11 +50,14 @@ import Theme from "../Buttons/ToggleDark.vue";
 import Bell from "../Buttons/NotificationBell.vue";
 
 const route = useRoute();
-const currentRoute = ref(route.name);
 
 const open = ref(false);
 const openNav = () => {
   open.value = !open.value;
+};
+
+const closeNav = () => {
+  open.value === true ? (open.value = false) : "";
 };
 
 const navItems = [
@@ -62,11 +80,6 @@ const navItems = [
     name: "partners",
     link: "#partners",
     xlink: "/#partners",
-  },
-  {
-    name: "reports",
-    link: "#reports",
-    xlink: "/#reports",
   },
 ];
 </script>
