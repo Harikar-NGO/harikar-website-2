@@ -1,14 +1,18 @@
 <template>
-  <Hero id="home" class="section" />
-  <Aboutus id="about" class="section" />
-  <Profile id="profile" class="section" />
-  <Projects id="projects" class="section" />
-  <Expertise id="expertise" class="section" />
-  <Partners id="partners" class="section" />
-  <Quotation id="quotation" class="section" />
-  <Address id="address" class="section" />
+  <Hero id="home" />
+  <Aboutus id="about" />
+  <Profile id="profile" class="profile" />
+  <Projects id="projects" />
+  <Expertise id="expertise" />
+  <Partners id="partners" />
+  <Quotation id="quotation" />
+  <Address id="address" />
 </template>
 
-<style scoped></style>
+<style scoped>
+.profile {
+  scroll-margin-top: var(--size-10);
+}
+</style>
 
 <script setup></script>
