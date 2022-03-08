@@ -1,5 +1,5 @@
 <template>
-  <svg id="Layer_1" viewBox="0 0 25 25" width="16" height="16">
+  <svg id="Layer_1" viewBox="0 0 25 25" :width="w" :height="h">
     <title>Location Pin</title>
     <path
       id="location-icon"
@@ -9,9 +9,11 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  color: String,
-});
+ const props = defineProps({
+   color: String,
+   w: String,
+   h: String,
+ });
 </script>
 
 <style scoped>

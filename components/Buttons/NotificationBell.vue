@@ -1,5 +1,5 @@
 <template>
-  <div class="notification">
+  <div class="notification" @click="dropMenu">
     <svg width="25" height="25" viewbox="0 0 166 197">
       <path
         d="M82.8652955,196.898522 C97.8853137,196.898522 110.154225,184.733014 110.154225,169.792619 L55.4909279,169.792619 C55.4909279,184.733014 67.8452774,196.898522 82.8652955,196.898522 L82.8652955,196.898522 Z"
@@ -11,10 +11,31 @@
       ></path>
     </svg>
     <div class="notification--num">5</div>
+    <div class="menu" :class="{ dropped: drop }">
+      <p class="menu-title">Jobs and Bids</p>
+      <div class="menu-items">
+        <a href="" class="menu-item">
+          <jobsIcon color="var(--text1)" h="22" w="22" />
+          <p>Jobs: 0</p>
+        </a>
+        <a href="" class="menu-item">
+          <bidsIcon color="var(--text1)" w="22" h="22" />
+          <p>Bids: 0</p>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import jobsIcon from "../Icons/jobsIcon.vue";
+import bidsIcon from "../Icons/BidsIcon.vue";
+const drop = ref(false);
+
+const dropMenu = () => {
+  drop.value = !drop.value;
+};
+</script>
 
 <style scoped>
 .notification {
@@ -22,18 +43,85 @@
   cursor: pointer;
 }
 
+.menu {
+  position: absolute;
+  left: -5.8rem;
+  top: calc(100% + 1.4rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-3);
+  justify-items: center;
+  background: var(--surface3);
+  padding: var(--size-3);
+  border-radius: var(--radius-2);
+  max-width: 10rem;
+  box-shadow: var(--shadow-3);
+  transform: translateY(-1em);
+  opacity: 0;
+  transition: opacity 150ms var(--ease-out-1), transform 150ms var(--ease-out-1);
+  pointer-events: none;
+}
+
+.dropped {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  cursor: default;
+}
+
+.menu::before {
+  position: absolute;
+  top: -1em;
+  right: 2em;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid var(--surface3);
+}
+
+.menu-title {
+  font-size: var(--font-size-1);
+  width: var(--size-content-1);
+}
+
+.menu-items {
+  display: grid;
+  gap: var(--size-2);
+}
+
+.menu-item {
+  display: flex;
+  justify-items: center;
+  gap: var(--size-3);
+  text-decoration: none;
+}
+
+.menu-item > p {
+  color: var(--text2);
+}
+
+.menu-item > p:hover {
+  color: var(--brand);
+}
+
+.menu-item > p {
+  font-size: var(--font-size-1);
+}
+
 .notification svg > path {
   fill: var(--text2);
- }
- .notification svg > path:hover {
-   fill: var(--text1);
- }
- .notification--bell {
-   animation: bell 2.2s linear;
-   transform-origin: 50% 0%;
- }
+}
+.notification svg > path:hover {
+  fill: var(--text1);
+}
+.notification--bell {
+  animation: bell 2.2s linear;
+  transform-origin: 50% 0%;
+}
 .notification--bellClapper {
-  animation: bellClapper 2.2s 0.1s linear;
+  animation: bellClapper 1.5s 0.1s linear;
 }
 .notification--num {
   position: absolute;
@@ -48,7 +136,7 @@
   text-align: center;
   display: grid;
   place-content: center;
-  animation: notification 3.2s ease;
+  animation: notification 2s ease;
 }
 
 @keyframes bell {

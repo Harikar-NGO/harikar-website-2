@@ -6,15 +6,15 @@
     <div class="address">
       <p class="address-title">Head Quarter</p>
       <div class="address-item">
-        <PhoneIcon color="var(--text1)" />
+        <PhoneIcon color="var(--text1)" w="16" h="16" />
         <p>+964 773 697 1165</p>
       </div>
       <div class="address-item">
-        <EmailIcon color="var(--text1)" />
+        <EmailIcon color="var(--text1)" w="16" h="16" />
         <p>info@harikar.org</p>
       </div>
       <div class="address-item">
-        <LocationIcon color="var(--text1)" />
+        <LocationIcon color="var(--text1)" w="16" h="16" />
         <p>Australia St, Media Quarter, 99448 Duhok, KR-Iraq</p>
       </div>
     </div>

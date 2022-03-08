@@ -1,5 +1,5 @@
 <template>
-  <svg viewBox="0 0 36 25" width="16" height="16">
+  <svg viewBox="0 0 36 25" :width="w" :height="h">
     <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
     <title>Email</title>
     <desc>Created with Sketch.</desc>
@@ -23,7 +23,9 @@
 
 <script setup>
 const props = defineProps({
-  color: String,
+   color: String,
+   w: String,
+   h: String,
 });
 </script>
 

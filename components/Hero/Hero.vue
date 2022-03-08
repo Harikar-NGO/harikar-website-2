@@ -10,7 +10,8 @@
       </p>
       <div class="button-list animate-top-down">
         <button class="primary">
-          write to us <span><SendIcon color="var(--gray-3)" /></span>
+          write to us
+          <span><SendIcon color="var(--gray-3)" h="16" width="16" /></span>
         </button>
       </div>
     </div>

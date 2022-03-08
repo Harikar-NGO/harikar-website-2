@@ -1,5 +1,5 @@
 <template>
-  <svg width="16" height="16" viewBox="0 0 18 18">
+  <svg :width="w" :height="h" viewBox="0 0 18 18">
     <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
     <title>phone</title>
     <desc>Created with Sketch.</desc>
@@ -25,9 +25,11 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  color: String,
-});
+ const props = defineProps({
+   color: String,
+   w: String,
+   h: String,
+ });
 </script>
 
 <style scoped>

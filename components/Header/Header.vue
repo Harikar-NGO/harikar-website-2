@@ -26,7 +26,7 @@
             href="/reports"
             @click="closeNav"
             :class="{
-              active: route.name.includes('reports'),
+              active: route.name === 'reports',
             }"
             >reports</a
           >

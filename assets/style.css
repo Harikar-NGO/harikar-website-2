@@ -112,7 +112,6 @@ html {
   background-color: var(--surface1);
   color: var(--text1);
   accent-color: var(--brand);
-  scroll-padding-top: var(--size-10);
 }
 
 body {
