@@ -9,10 +9,7 @@
         organization.
       </p>
       <div class="button-list animate-top-down">
-        <button class="primary">
-          write to us
-          <span><SendIcon color="var(--gray-3)" h="16" width="16" /></span>
-        </button>
+        <SendButton text="Write to Us" />
       </div>
     </div>
     <picture class="promo-art">
@@ -28,8 +25,8 @@
 </template>
 
 <script setup>
-import SendIcon from "../Icons/SendIcon.vue";
 import Triangle from "../Shapes/Triangle.vue";
+import SendButton from "../Buttons/SendButton.vue";
 </script>
 
 <style scoped>

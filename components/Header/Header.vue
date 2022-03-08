@@ -15,9 +15,6 @@
           <a
             :href="route.name === 'index' ? item.link : item.xlink"
             @click="closeNav"
-            :class="{
-              active: route.hash === item.link || route.name === item.name,
-            }"
             >{{ item.name }}</a
           >
         </li>
@@ -25,9 +22,6 @@
           <a
             href="/reports"
             @click="closeNav"
-            :class="{
-              active: route.name === 'reports',
-            }"
             >reports</a
           >
         </li>

@@ -37,10 +37,6 @@ header {
   color: var(--brand);
 }
 
-.main-nav li .active {
-  color: var(--brand);
-}
-
 .logo {
   object-fit: contain;
   margin-inline-start: var(--size-11);
