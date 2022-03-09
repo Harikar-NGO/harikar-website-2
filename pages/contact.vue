@@ -49,6 +49,7 @@ input {
   padding: var(--size-2);
   color: var(--text2);
   background: var(--surface3);
+  border-radius: var(--radius-2);
 }
 
 textarea {
@@ -58,6 +59,7 @@ textarea {
   padding: var(--size-2);
   color: var(--text2);
   background: var(--surface3);
+  border-radius: var(--radius-2);
 }
 
 h2 {

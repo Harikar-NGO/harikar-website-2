@@ -1,0 +1,141 @@
+.main-wrap {
+  padding-inline: var(--size-2);
+  padding-block: var(--size-4);
+  display: grid;
+  gap: var(--size-2);
+  grid-template:
+    "form"
+    "preview"
+    "integrations" / 1fr;
+}
+
+@media (min-width: 950px) {
+  .main-wrap {
+    padding-inline: var(--size-12);
+    gap: var(--size-1);
+    grid-template:
+      "form preview" 11rem
+      "form integrations" / 1fr 1fr;
+  }
+}
+
+h2 {
+  font-size: var(--font-size-2);
+  padding-block: var(--size-4);
+  color: var(--brand);
+}
+
+.form {
+  gird-area: form;
+  padding-inline: var(--size-8);
+  padding-block: var(--size-2);
+}
+
+form {
+  display: grid;
+  gap: var(--size-4);
+}
+.form-item {
+  display: grid;
+  gap: var(--size-2);
+}
+
+label {
+  color: var(--text1);
+  font-size: var(--font-size-0);
+  font-weight: var(--font-weight-6);
+}
+
+input {
+  max-width: 100%;
+  box-shadow: var(--shadow-2);
+  border: var(--border-size-1) solid var(--text2);
+  padding: var(--size-2);
+  color: var(--text2);
+  background: var(--surface3);
+  border-radius: var(--radius-2);
+}
+
+.error,
+.help {
+  font-size: var(--font-size-0);
+}
+
+.error {
+  color: var(--red-7);
+}
+
+.preview {
+  padding-inline: var(--size-8);
+  padding-block: var(--size-2);
+  background: var(--surface1);
+  grid-area: preview;
+}
+
+.preview-card {
+  background: var(--gray-1);
+  padding: var(--size-2);
+  max-width: max-content;
+  border-radius: var(--radius-2);
+}
+
+.integrations {
+  grid-area: integrations;
+  padding-inline: var(--size-8);
+  padding-top: var(--size-1);
+  padding-bottom: var(--size-3);
+  background: var(--surface3);
+  box-shadow: var(--shadow-2);
+  border-radius: var(--radius-2);
+}
+
+.integrations ol > li {
+  font-size: var(--font-size-0);
+  margin-left: var(--size-4);
+  color: var(--text2);
+}
+
+.note {
+  padding-inline: var(--size-4);
+  margin-top: var(--size-4);
+  border-left: 5px solid var(--brand);
+}
+
+.note > p {
+  font-size: var(--font-size-0);
+}
+
+.btns {
+  display: flex;
+  gap: var(--size-2);
+}
+
+.btn {
+  font-size: var(--size-fluid-1);
+  color: var(--brand);
+  font-weight: var(--font-weight-6);
+  padding-inline: var(--size-2);
+  padding-block: var(--size-2);
+  border-radius: var(--radius-2);
+  background: var(--surface1);
+  text-transform: uppercase;
+  border: var(--border-size-1) solid var(--brand);
+}
+.btn:hover,
+.btn:active {
+  outline: none;
+  cursor: pointer;
+}
+.btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.primary-btn {
+  color: var(--gray-1);
+  background: var(--brand);
+}
+.secondary-btn {
+  color: var(--v-primary-base);
+  background: var(--surface3);
+}
