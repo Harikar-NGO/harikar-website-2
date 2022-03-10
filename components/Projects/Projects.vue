@@ -6,7 +6,7 @@
     <div class="container">
       <div class="media-scroller snaps-inline">
         <div
-          v-for="(project, index) in currentProjects"
+          v-for="(project, index) in projects"
           :key="index"
           class="media-element"
         >
@@ -33,12 +33,9 @@ import Tint from "../Shapes/Tint.vue";
 const getImg = (id) => {
   return `https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/projects/project-${id}.webp`;
 };
-const {
-  data: {
-    value: { projects },
-  },
-} = await useFetch("https://harikar-reports-api.herokuapp.com/v2/projects");
-const currentProjects = projects.filter((item) => item.state === "onGoing");
+const { data: projects } = await useFetch(
+  "https://harikar-reports-api.herokuapp.com/v2/projectsmini"
+);
 </script>
 
 <style scoped>

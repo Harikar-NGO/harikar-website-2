@@ -45,11 +45,18 @@
 .expertise {
   display: grid;
   place-items: center;
-  gap: var(--size-2);
+  gap: var(--size-3);
   font-size: var(--font-size-fluid-0);
   overflow: hidden;
   height: var(--size-11);
   position: relative;
+}
+
+@media (min-width: 450px) {
+  .expertise {
+    height: var(--size-12);
+    gap: var(--size-3);
+  }
 }
 
 .expertise-list {
@@ -57,14 +64,24 @@
   gap: var(--size-5);
 }
 .expertise-btn {
-  padding: var(--size-2);
+  padding-block: var(--size-1);
+  padding-inline: var(--size-1);
   background: transparent;
+  border: var(--border-size-1) solid var(--gray-3);
+  border-radius: var(--radius-2);
+}
+
+@media (min-width: 450px) {
+  .expertise-btn {
+    padding-block: var(--size-2);
+    padding-inline: var(--size-2);
+  }
 }
 
 .active > button {
   background: var(--brand);
   color: var(--gray-1);
-  border-radius: var(--radius-2);
   animation: var(--animation-slide-in-down);
   cursor: default;
+  border: var(--border-size-1) solid var(--brand);
 }

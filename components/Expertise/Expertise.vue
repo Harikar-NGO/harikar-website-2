@@ -35,13 +35,13 @@ import Tint from "../Shapes/Tint.vue";
 
 const isActive = ref(true);
 
-let expertiseList = ref([
-  ["General Protection", "GBV", "Legal Assistance"],
-  ["Livelihood", "PSEA Trainings", "WASH"],
-  ["Reproductive Health", "Child Protection", "Green Houses"],
-  ["Awarness raising", "PSS", "Case managment"],
-]);
-const flipList = () => {
+ let expertiseList = ref([
+   ["General Protection", "GBV", "Legal Assistance"],
+   ["Livelihood", "PSEA Trainings", "Child Protection"],
+   ["Reproductive Health", "WASH", "Green Houses"],
+   ["Awarness raising", "PSS", "Case managment"],
+ ]);
+ const flipList = () => {
   let array = expertiseList.value;
   array.unshift(array.pop());
   return array;
