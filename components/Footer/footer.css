@@ -12,6 +12,7 @@ footer {
   justify-items: center;
   align-items: start;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 @media (min-width: 950px) {

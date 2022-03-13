@@ -4,10 +4,11 @@
   display: grid;
   grid-template:
     "title" 0.2fr
-    "content" 2fr / 1fr;
+  "content" 2fr / 1fr;
   place-items: center;
   position: relative;
   gap: var(--size-4);
+  overflow-x: hidden;
 }
 @media (min-width: 950px) {
   .main-wrap {

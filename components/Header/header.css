@@ -10,6 +10,7 @@ header {
   right: 0;
   z-index: var(--layer-4);
   background: var(--surface1);
+  overflow-x: hidden;
 }
 
 .main-nav {

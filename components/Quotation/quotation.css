@@ -5,6 +5,7 @@
   place-items: center;
   background: var(--surface3);
   background-image: var(--gradient-brand);
+  overflow-x: hidden;
 }
 
 .quote {
