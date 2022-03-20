@@ -29,9 +29,11 @@ button {
   display: flex;
   align-items: center;
   gap: var(--size-3);
+  transition: all 150ms var(--ease-out-1);
 }
 
 button:hover {
   transform: scale(1.1);
+  box-shadow: var(--shadow-2);
 }
 </style>

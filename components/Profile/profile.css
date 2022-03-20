@@ -17,6 +17,7 @@
   font-size: var(--font-size-fluid-0);
   padding-block: var(--size-2);
   line-height: var(--font-lineheight-3);
+  max-width: var(--size-content-3);
 }
 
 .tabset > input[type="radio"] {
@@ -121,10 +122,10 @@
   border-top: var(--border-size-1) solid var(--text2);
 }
 
-.mission {
-  column-count: 2;
-}
+/* .mission {
+   column-count: 2;
+   }
 
-.values {
-  column-count: 2;
-}
+   .values {
+   column-count: 2;
+   } */

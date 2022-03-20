@@ -71,7 +71,6 @@
 .promo-art > img {
   block-size: 100%;
   object-fit: cover;
-  box-shadow: var(--shadow-3);
   width: 100%;
 }
 

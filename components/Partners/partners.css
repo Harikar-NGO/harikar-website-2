@@ -3,7 +3,7 @@
   display: grid;
   grid-template:
     "title" 0.2fr
-  "content" 2fr / 1fr;
+    "content" 2fr / 1fr;
   place-items: start;
   overflow: hidden;
   position: relative;
@@ -41,6 +41,7 @@
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   place-items: center;
+  padding-block: var(--size-4);
 }
 
 .media-element {
@@ -52,13 +53,14 @@
   min-height: 10rem;
   max-height: 10rem;
   min-width: 10rem;
-  box-shadow: var(--shadow-2);
+  box-shadow: var(--shadow-3);
   background: var(--surface4);
+  transition: all 100ms var(--ease-in-1);
 }
 
 .media-element:hover {
-  transform: scale(1.1);
-  transition: transform 100ms var(--ease-in-1);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-2);
 }
 
 .partner-logo {
