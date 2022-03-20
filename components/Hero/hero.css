@@ -6,9 +6,7 @@
     "image" 10rem;
   background: var(--surface3);
   background-image: var(--gradient-brand);
-  overflow-x: hidden;
   position: relative;
-  overflow-x: hidden;
 }
 
 @media (min-width: 950px) {

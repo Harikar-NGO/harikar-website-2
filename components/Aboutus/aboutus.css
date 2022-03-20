@@ -9,7 +9,6 @@
   place-items: center;
   gap: var(--size-4);
   scroll-padding-top: 15rem;
-  overflow-x: hidden;
 }
 @media (min-width: 950px) {
   .main-wrap {

@@ -6,11 +6,8 @@ header {
   box-shadow: var(--shadow-2);
   position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: var(--layer-4);
   background: var(--surface1);
-  overflow-x: hidden;
 }
 
 .main-nav {

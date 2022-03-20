@@ -72,7 +72,7 @@ const dropMenu = () => {
 .menu::before {
   position: absolute;
   top: -1em;
-  right: 2em;
+  right: 0.8em;
   content: "";
   width: 0;
   height: 0;
@@ -83,7 +83,7 @@ const dropMenu = () => {
 
 .menu-title {
   font-size: var(--font-size-1);
-  width: var(--size-content-1);
+  width: max-content;
 }
 
 .menu-items {
