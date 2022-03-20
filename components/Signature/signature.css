@@ -26,7 +26,7 @@ h2 {
 }
 
 .form {
-  gird-area: form;
+  grid-area: form;
   padding-inline: var(--size-8);
   padding-block: var(--size-2);
 }
