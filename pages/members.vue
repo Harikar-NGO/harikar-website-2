@@ -1,60 +1,83 @@
 <template>
   <div class="main-wrap">
-    <div class="left">
-      <div class="avatar">
-        <img
-          alt="Salah Majid's photo"
-          src="https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/members/salah.webp"
-        />
-      </div>
-      <div class="name">
-        <p>Salah Y. Majid</p>
-      </div>
-      <div class="title"><p>Executive Director</p></div>
-      <div class="info">
-        <p>
-          Graduate from College of Arts in 1991, Mosul University, Iraq.
-          Executive Director of Harikar NGO since 2007. Started with
-          humanitarian sectors with Care International Australia in 1992.
-          Previous experiences with World Food Programme, with more than 28
-          years of experience in development, management, emergency response
-          operation, project management, project design and proposal writing.
-          Being in the field of promoting and developing humanitarian and civil
-          society work since 1992, Salah was granted with Civic Award of the
-          Ministry of Civil Society Affairs by the Prime Minister of KRG in
-          2008.
-        </p>
-      </div>
-    </div>
+    <h1 class="page-title">Executive Board Members</h1>
+    <Member
+      left
+      alt="Salah Majid's photo"
+      name="Salah Y. Majid"
+      img="https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/members/salah.webp"
+      title="Executive Director"
+      desc="Graduate from College of Arts in 1991,
+           Mosul University, Iraq. Executive Director of Harikar NGO since 2007.
+           Started with humanitarian sectors with Care International Australia in 1992.
+           Previous experiences with World Food Programme, with more than 28 years of
+           experience in development, management, emergency response operation, project
+           management, project design and proposal writing. Being in the field of
+           promoting and developing humanitarian and civil society work since 1992,
+           Salah was granted with Civic Award of the Ministry of Civil Society Affairs
+           by the Prime Minister of KRG in 2008."
+    />
+    <Member
+      right
+      alt="Nawzad Saed's photo"
+      name="Nawzad Saed"
+      img="https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/members/nawzad.webp"
+      title="Operations Manager"
+      desc="Nawzad Saeed is an operations manager with more than 25 years of experience in
+           management and working with local and international Humanitarian agencies.
+           He specializes in Education Administrations. He enjoys using his skills to
+           contribute to the promotion of the organization process and procedures.
+           He is a powerful force in the workplace and uses his usual positive attitude and
+           tireless energy to encourage others to work hard and succeed. Nawzad graduated
+           from Mosul University in 1991 with a Bachelor's Degree in English and completed
+           MA in Educational administration in 2008 at St. Clements University.
+           He is currently the head of the board of trustees at Dohuk Private technical Institute
+           and a member of the founders of Harikar Organization."
+    />
+    <Member
+      left
+      alt="Nareen Abbas' photo"
+      name="Nareen Abbas"
+      img="https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/members/nareen.webp"
+      title="Programme Manager"
+      desc="Nareen Abbas Mohammed Harikar NGO Programme Manager. Nareen Has more than 24 years of experience
+           working in programme and administrative fields with local and international NGOs as well as UN agencies.
+           Nareen received her Bachelor of Arts in Translation from Mosul University in 1995."
+    />
+    <Member
+      right
+      alt="Sahira Ali' photo"
+      name="Sahira Ali"
+      img="https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/members/sahira.webp"
+      title="Programme Manager"
+      desc="Sahira Ali Hussein, Harikar NGO Finance Manager. A contributor to the development and success of the
+           financial and management system of Harikar NGO. With more than 15 years of experience working in
+           finance and administrative field with Local NGO and UN agencies. Sahira graduated from Salahaddin
+           University in 1997 with a Bachelor's Degree in political sciences."
+    />
   </div>
 </template>
 
 <script></script>
 
 <style scoped>
+.page-title {
+  text-align: center;
+  font-size: var(--size-fluid-4);
+}
 .main-wrap {
-  padding-block: var(--size-8);
-  padding-inline: var(--size-12);
-}
-
-.left {
+  padding-block-start: var(--size-8);
+  padding-block-end: var(--size-12);
+  padding-inline: var(--size-8);
   display: grid;
-  grid-template:
-    "avatar info"
-    "name info"
-    "title info" / 1fr 5 fr;
+  gap: var(--size-8);
+  place-content: center;
+  place-items: center;
 }
 
-.avatar {
-  grid-area: avatar;
-}
-.name {
-  grid-area: name;
-}
-.title {
-  grid-area: title;
-}
-.info {
-  grid-area: info;
+@media (min-width: 950px) {
+  .main-wrap {
+    gap: var(--size-10);
+  }
 }
 </style>
