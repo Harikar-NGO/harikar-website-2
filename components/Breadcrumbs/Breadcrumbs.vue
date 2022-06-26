@@ -39,6 +39,7 @@ ul.breadcrumb li + li:before {
 ul.breadcrumb li a {
   color: var(--brand);
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 /* Add a color on mouse-over */

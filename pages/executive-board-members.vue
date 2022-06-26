@@ -68,7 +68,7 @@ const items = [
     disabled: false,
   },
   {
-    name: "members",
+    name: "executive board members",
     disabled: true,
   },
 ];

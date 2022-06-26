@@ -17,9 +17,11 @@
       <div class="list harikar">
         <p class="list-title">harikar</p>
         <ul class="list-items">
-          <li class="list-item"><a href="/members">executive board</a></li>
+          <li class="list-item">
+            <a href="/executive-board-members">executive board</a>
+          </li>
           <li class="list-item"><a href="#profile">profile</a></li>
-          <li class="list-item"><a href="">Legal Status</a></li>
+          <li class="list-item"><a href="/legal-status">Legal Status</a></li>
         </ul>
       </div>
       <div class="list ref">
