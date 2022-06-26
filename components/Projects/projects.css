@@ -66,7 +66,7 @@
 
 .media-element > img {
   inline-size: 100%;
-  aspct-ratio: var(--ratio-landscape);
+  aspect-ratio: var(--ratio-landscape);
   object-fit: cover;
   max-width: 100%;
   height: auto;
@@ -78,6 +78,7 @@
 }
 
 .media-element__btn {
+  align-self: end;
   font-size: var(--font-size-0);
   font-weight: var(--font-weight-6);
   padding-inline: var(--size-1);
@@ -87,6 +88,7 @@
   background: var(--brand);
   color: var(--gray-2);
   display: block;
+  max-height: var(--size-6);
   transition: all 100ms var(--ease-in-1);
 }
 

@@ -18,7 +18,7 @@
             height="125"
           />
           <p class="media-element__title">
-            {{ project.name.substr(0, 25) + "..." }}
+            {{ project.name.substr(0, 80) + "..." }}
           </p>
           <button class="media-element__btn">Learn More</button>
         </div>

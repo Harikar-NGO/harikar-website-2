@@ -26,6 +26,7 @@
   text-align: center;
   gap: var(--size-1);
 }
+
 .desc {
   grid-area: desc;
 }

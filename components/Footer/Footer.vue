@@ -17,7 +17,7 @@
       <div class="list harikar">
         <p class="list-title">harikar</p>
         <ul class="list-items">
-          <li class="list-item"><a href="">executive board</a></li>
+          <li class="list-item"><a href="/members">executive board</a></li>
           <li class="list-item"><a href="#profile">profile</a></li>
           <li class="list-item"><a href="">Legal Status</a></li>
         </ul>
@@ -25,7 +25,7 @@
       <div class="list ref">
         <p class="list-title">references</p>
         <ul class="list-items">
-          <li class="list-item"><a href="">policies</a></li>
+          <li class="list-item"><a href="/policies">policies</a></li>
         </ul>
       </div>
       <div class="list other">

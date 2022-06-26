@@ -8,23 +8,22 @@
         We have expertise in a wide range of humanitarian and technical
         departments.
       </p>
-      <TransitionGroup tag="ul" name="fade" class="container">
+      <ul class="container">
         <div
           v-for="(list, index) in expertiseList"
           :key="index"
           class="expertise-list"
-          :class="{ active: index === 1 }"
         >
-          <button
+          <li
             tabindex="-1"
             v-for="(item, index) in list"
             :key="index"
-            class="expertise-btn"
+            class="expertise-item"
           >
             {{ item }}
-          </button>
+          </li>
         </div>
-      </TransitionGroup>
+      </ul>
     </div>
     <Tint flipped gray />
   </div>
@@ -33,19 +32,12 @@
 <script setup>
 import Tint from "../Shapes/Tint.vue";
 
-let expertiseList = ref([
+let expertiseList = [
   ["General Protection", "GBV", "Legal Assistance"],
   ["Livelihood", "PSEA Trainings", "Child Protection"],
   ["Reproductive Health", "WASH", "Green Houses"],
   ["Awarness raising", "PSS", "Case managment"],
-]);
-const flipList = () => {
-  let array = expertiseList.value;
-  array.unshift(array.pop());
-  return array;
-};
-
-setInterval(flipList, 4000);
+];
 </script>
 
 <style scoped>
