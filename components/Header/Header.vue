@@ -19,11 +19,7 @@
           >
         </li>
         <li>
-          <a
-            href="/reports"
-            @click="closeNav"
-            >reports</a
-          >
+          <a href="/reports" @click="closeNav">reports</a>
         </li>
       </ul>
     </nav>
@@ -39,9 +35,9 @@
 </template>
 
 <script setup>
-import Menu from "../Buttons/Menu.vue";
-import Theme from "../Buttons/ToggleDark.vue";
-import Bell from "../Buttons/NotificationBell.vue";
+import Menu from "~/components/Buttons/Menu.vue";
+import Theme from "~/components/Buttons/ToggleDark.vue";
+import Bell from "~/components/Buttons/NotificationBell.vue";
 
 const route = useRoute();
 

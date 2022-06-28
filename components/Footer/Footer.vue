@@ -20,7 +20,11 @@
           <li class="list-item">
             <a href="/executive-board-members">executive board</a>
           </li>
-          <li class="list-item"><a href="#profile">profile</a></li>
+          <li class="list-item">
+            <a :href="route.name === 'index' ? '#profile' : '/#profile'"
+              >profile</a
+            >
+          </li>
           <li class="list-item"><a href="/legal-status">Legal Status</a></li>
         </ul>
       </div>
@@ -34,7 +38,11 @@
         <p class="list-title">other</p>
         <ul class="list-items">
           <li class="list-item"><a href="/contact">contact us</a></li>
-          <li class="list-item"><a href="#address">address</a></li>
+          <li class="list-item">
+            <a :href="route.name === 'index' ? '#address' : '/#address'"
+              >address</a
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -70,7 +78,9 @@
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+const route = useRoute();
+</script>
 
 <style scoped>
 @import "./footer.css";
