@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     css: ["~/assets/style.css"],
     modules: ["@nuxtjs/color-mode"],
     meta: {
-        title: "Harikar NGO website",
+        title: "Harikar NGO",
+        description: "Harikar's backup website",
         charset: "utf-8",
         viewport: "width=device-width, initial-scale=1"
         }

@@ -14,11 +14,11 @@
     <div class="menu" :class="{ dropped: drop }">
       <p class="menu-title">Jobs and Bids</p>
       <div class="menu-items">
-        <a href="" class="menu-item">
+        <a href="/announcements/job-opportunities" class="menu-item">
           <jobsIcon color="var(--text1)" h="22" w="22" />
           <p>Jobs: 0</p>
         </a>
-        <a href="" class="menu-item">
+        <a href="/announcements/bids" class="menu-item">
           <bidsIcon color="var(--text1)" w="22" h="22" />
           <p>Bids: 0</p>
         </a>
