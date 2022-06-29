@@ -1,23 +1,24 @@
 <template>
-  <div class="card">
+  <div
+    class="card"
+    :style="{ 'border-top': 'var(--border-size-3) solid' + setColor(dl) }"
+  >
     <div class="content">
       <p class="eng" lang="eng" dir="ltr">
-        Providing rented vehicles with drivers for
+        {{ eng }}
       </p>
-      <p class="ara" lang="ar" dir="rtl">
-        تجهيز السيارات المؤجرة مع السائق لمنظمة هاري
-      </p>
+      <p class="ara" lang="ar" dir="rtl">{{ ara }}</p>
       <p class="kurd" lang="ku" dir="rtl">
-        چاپکرنا کەرەستێن فێرکاری و زانیاری سنيتبنميستب صثنمتنصمت
+        {{ kurd }}
       </p>
-      <div class="dates">
-        <p class="announcement-data">
-          <span><strong>Announced at: </strong> </span>24/6/2022
-        </p>
-        <p class="deadline">
-          <span><strong>Deadline: </strong></span>24/7/2022
-        </p>
-      </div>
+    </div>
+    <div class="dates">
+      <p class="announcement-data">
+        <span><strong>Announced at: </strong> </span>{{ date }}
+      </p>
+      <p class="deadline">
+        <span><strong>Deadline: </strong></span>{{ deadline }}
+      </p>
     </div>
     <div class="buttons">
       <button class="button">Read more</button>
@@ -26,39 +27,29 @@
   </div>
 </template>
 
+<script setup>
+const props = defineProps({
+  eng: String,
+  ara: String,
+  kurd: String,
+  data: String,
+  deadline: String,
+  link: String,
+  dl: Number,
+});
+const setColor = (dl) => {
+  const color =
+    dl > 7
+      ? "#2196F3"
+      : dl >= 3
+      ? "#4CAF50"
+      : dl < 3 && dl > 0
+      ? "#F44336"
+      : "#424242";
+  return color;
+};
+</script>
+
 <style scoped>
-.card {
-  display: grid;
-  gap: var(--size-1);
-  background-color: var(--surface3);
-  border-radius: var(--radius-3);
-  box-shadow: var(--shadow-2);
-  border-top: var(--border-size-3) solid var(--brand);
-}
-.content {
-  padding-block: var(--size-3);
-  padding-inline: var(--size-4);
-  display: grid;
-  gap: var(--size-2);
-}
-.buttons {
-  display: flex;
-  place-content: space-around;
-  gap: var(--size-3);
-  background-color: var(--surface4);
-  padding: 0;
-  margin: 0;
-  border-radius: 0 0 var(--radius-3) var(--radius-3);
-}
-
-.button {
-  background-color: transparent;
-  padding: var(--size-2);
-}
-
-.button:hover {
-  color: var(--brand);
-}
+@import "./announcement-cards-style.css";
 </style>
-
-<script setup></script>
