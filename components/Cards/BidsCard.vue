@@ -1,7 +1,7 @@
 <template>
   <div
     class="card"
-    :style="{ 'border-top': 'var(--border-size-3) solid' + setColor(dl) }"
+    :style="{ 'border-top': 'var(--border-size-3) solid ' + setColor(dl) }"
   >
     <div class="content">
       <p class="eng" lang="eng" dir="ltr">
@@ -21,8 +21,21 @@
       </p>
     </div>
     <div class="buttons">
-      <button class="button">Read more</button>
-      <button class="button">Download</button>
+      <button class="button">
+        <a
+          :href="`https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/bids/${refNum}_announcement.pdf`"
+          target="__blank"
+          >Read more</a
+        >
+      </button>
+      <button class="button">
+        <a
+          :href="`https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/bids/${refNum}.pdf`"
+          target="__blank"
+        >
+          Download
+        </a>
+      </button>
     </div>
   </div>
 </template>
@@ -32,20 +45,21 @@ const props = defineProps({
   eng: String,
   ara: String,
   kurd: String,
-  data: String,
+  date: String,
   deadline: String,
   link: String,
   dl: Number,
+  refNum: String,
 });
 const setColor = (dl) => {
   const color =
     dl > 7
-      ? "#2196F3"
+      ? "var(--blue-7)"
       : dl >= 3
-      ? "#4CAF50"
+      ? "var(--green-7)"
       : dl < 3 && dl > 0
-      ? "#F44336"
-      : "#424242";
+      ? "var(--red-7)"
+      : "var(--surface3)";
   return color;
 };
 </script>

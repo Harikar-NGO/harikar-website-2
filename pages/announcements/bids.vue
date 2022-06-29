@@ -7,52 +7,18 @@
           eng="this is the title english for this card"
           ara="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
           kurd="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          data="20/06/2022"
+          date="20/06/2022"
           deadline="12/07/2022"
-          :dl="getTime('2022-07-12')"
-        />
-        <bids-card
-          eng="this is the title english for this card Lectus sit amet est placerat in egestas erat imperdiet sed."
-          ara="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          kurd="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          data="20/06/2022"
-          deadline="12/07/2022"
-          :dl="getTime('2022-07-05')"
-        />
-        <bids-card
-          eng="this is the title english for this card"
-          ara="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          kurd="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          data="20/06/2022"
-          deadline="12/07/2022"
-          :dl="getTime('2022-06-30')"
-        />
-        <bids-card
-          eng="this is the title english for this card Lectus sit amet est placerat in egestas erat imperdiet sed."
-          ara="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          kurd="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          data="20/06/2022"
-          deadline="12/07/2022"
-          :dl="getTime('2022-07-12')"
-        />
-        <bids-card
-          eng="this is the title english for this card Amet, dictum sit amet justo donec enim diam, vulputate ut pharetra sit amet, aliquam id diam maecenas ultricies mi eget mauris. Donec massa sapien, faucibus et molestie ac, feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare."
-          ara="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          kurd="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          data="20/06/2022"
-          deadline="12/07/2022"
-          :dl="getTime('2022-07-12')"
-        />
-        <bids-card
-          eng="this is the title english for this card Lectus sit amet est placerat in egestas erat imperdiet sed."
-          ara="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          kurd="هذا بللغة العربية ة انانا نحن الذين لسنا ان كنا نحن في هااااا"
-          data="20/06/2022"
-          deadline="12/07/2022"
-          :dl="getTime('2022-07-12')"
+          :dl="getTime('2022-06-14')"
+          refNum="ITB-HD-Harikar-2022_005"
         />
       </div>
     </div>
+    <ul class="legend">
+      <li class="mt7">More than 7 days left</li>
+      <li class="lt7">Less than 7 days left</li>
+      <li class="lt3">Less than 3 days left</li>
+    </ul>
   </div>
 </template>
 
@@ -105,11 +71,40 @@ const getTime = (dl) => {
   gap: var(--size-3);
 }
 
+.legend {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--size-10);
+  padding-block: var(--size-4);
+  place-items: center;
+}
+.legend li {
+  font-weight: var(--font-weight-6);
+}
+
+.mt7 {
+  color: var(--blue-7);
+}
+.lt7 {
+  color: var(--green-7);
+}
+.lt3 {
+  color: var(--red-7);
+}
+@media (min-width: 700px) {
+  .legend {
+    flex-direction: row;
+    place-content: space-around;
+  }
+}
+
 @media (min-width: 950px) {
   .main-wrap {
     padding-inline: var(--size-12);
     gap: var(--size-10);
   }
+
   .breadcrumbs {
     margin-left: var(--size-8);
     margin-top: var(--size-3);
