@@ -34,7 +34,7 @@ const getImg = (id) => {
   return `https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/projects/project-${id}.webp`;
 };
 const { data: projects } = await useFetch(
-  "https://harikar-reports-api.herokuapp.com/v2/projectsmini"
+  "https://harikar-reports-api.cyclic.app/v2/projectsmini"
 );
 </script>
 

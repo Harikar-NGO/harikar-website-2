@@ -24,7 +24,7 @@
 
 <script setup>
 /* const { data: bids } = await useFetch(
- *   "https://harikar-reports-api.herokuapp.com/v2/policies"
+ *   "https://harikar-reports-api.cyclic.app/v2/policies"
  * ); */
 
 import BidsCard from "~/components/Cards/BidsCard";
