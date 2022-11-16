@@ -30,12 +30,14 @@
 
 <script setup>
 import Tint from "../Shapes/Tint.vue";
-const getImg = (id) => {
-  return `https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/projects/project-${id}.webp`;
-};
+
 const { data: projects } = await useFetch(
   "https://harikar-reports-api.cyclic.app/v2/projectsmini"
 );
+
+const getImg = (id) => {
+  return `https://raw.githubusercontent.com/Harikar-NGO/harikar-website-files/main/images/projects/project-${id}.webp`;
+};
 </script>
 
 <style scoped>

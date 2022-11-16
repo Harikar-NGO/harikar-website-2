@@ -37,22 +37,6 @@
 import PhoneIcon from "../Icons/PhoneIcon.vue";
 import EmailIcon from "../Icons/EmailIcon.vue";
 import LocationIcon from "../Icons/LocationIcon.vue";
-
-let expertiseList = ref([
-  ["General Protection", "GBV", "Legal Assistance"],
-  ["Livelihood", "PSEA Trainings", "WASH"],
-  ["Reproductive Health", "Child Protection", "Green Houses"],
-  ["Awarness raising", "PSS", "Case managment"],
-]);
-const flipList = () => {
-  let array = expertiseList.value;
-  const lastElm = array[array.length - 1];
-  array.pop();
-  array.unshift(lastElm);
-
-  return array;
-};
-setInterval(flipList, 2800);
 </script>
 
 <style scoped>

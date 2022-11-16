@@ -29,7 +29,6 @@
 const { data: policies } = await useFetch(
   "https://harikar-reports-api.cyclic.app/v2/policies"
 );
-console.log(policies);
 const items = [
   {
     name: "home",
@@ -124,10 +123,6 @@ table th {
   }
 
   table td::before {
-    /*
-      * aria-label has no advantage, it won't be read inside a table
-        content: attr(aria-label);
-      */
     content: attr(data-label);
     float: left;
     font-weight: bold;

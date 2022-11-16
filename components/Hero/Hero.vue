@@ -29,6 +29,6 @@ import Triangle from "../Shapes/Triangle.vue";
 import SendButton from "../Buttons/SendButton.vue";
 </script>
 
-<style scoped>
+<style>
 @import "./hero.css";
 </style>

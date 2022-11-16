@@ -27,10 +27,6 @@
 </template>
 
 <script setup>
-const { data: policies } = await useFetch(
-  "https://harikar-reports-api.cyclic.app/v2/policies"
-);
-console.log(policies);
 const items = [
   {
     name: "home",
